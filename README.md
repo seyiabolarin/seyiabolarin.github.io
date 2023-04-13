@@ -1,4 +1,3 @@
-<!Doctype html>
 <html>
 <head>
 <title>Seyi Abolarin's Data Analytics, Data Science, Geospatial and Tech Hub</title>
@@ -30,13 +29,9 @@
 <h1>Geospatial Analytics</h1>
 <p>
 <br>1. Introduction to Geospatial Analytics: This would be an ideal topic for beginners who are new to the field of geospatial analytics. It would cover the basics of geospatial data, such as GPS and satellite data, as well as introduce basic analytical techniques used to analyze geospatial data.
-
 <br>2. Geospatial Data Visualization: This would be a great intermediate level topic, focusing on the different methods and tools used to visually represent geospatial data. This topic would cover different types of visualization techniques, including mapping, clustering, and heat mapping.
-
 <br>3. Geospatial Analysis Techniques: This topic would be ideal for intermediate to advanced learners who are familiar with the basics of geospatial data. It would cover different analytical techniques used to extract insights from geospatial data, such as spatial clustering, spatial regression, and spatial interpolation.
-
 <br>4. Machine Learning and Geospatial Analytics: This would be an advanced level topic, exploring the intersection of machine learning and geospatial analytics. It would cover different machine learning algorithms used in geospatial data analysis, such as deep learning, support vector machines, and random forests.
-
 <br>5. Geospatial Data Management and Integration: This advanced level topic would focus on the challenges associated with managing and integrating large and complex geospatial datasets. It would cover different data management techniques, such as data warehousing and big data technologies like Hadoop, as well as discuss strategies for integrating geospatial data with other types of data.</p>
 <br>
 <h1>Tech/Software Development</h1>
