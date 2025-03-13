@@ -54,7 +54,7 @@
             font-size: 1rem;
             color: #333;
             background: #fff;
-            box-sizing: border-box; /* Ensure consistent sizing */
+            box-sizing: border-box;
         }
 
         input[type="submit"] {
@@ -97,13 +97,18 @@
             color: #dcdcdc;
         }
     </style>
+    <script>
+        function clearForm() {
+            document.getElementById("contact-form").reset();
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Get in Touch with Seyi Abolarin</h1>
         <p>I would love to hear from you! Whether it’s a job referral, an offer, project collaboration, data inquiries, or just to say hi, feel free to reach out.</p>
         
-        <form action="https://formspree.io/f/mqapkjkd" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/mqapkjkd" method="POST" onsubmit="clearForm()">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
 
