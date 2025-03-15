@@ -1,0 +1,26 @@
+<h1 id="step-1-environment-setup">Step 1: Environment Setup</h1>
+<h2 id="install-homebrew">1.1 Install Homebrew</h2>
+<p>To install Homebrew, run the following command in your terminal:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/bin/bash</span> <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+<h2 id="install-jdk-17">1.2 Install JDK 17</h2>
+<p>Install the OpenJDK 17 using Homebrew:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install openjdk@17</span></code></pre></div>
+<p>Link the JDK to your system:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-sfn</span> <span class="va">$(</span><span class="ex">brew</span> <span class="at">--prefix</span><span class="va">)</span>/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk</span></code></pre></div>
+<p>Verify the installation:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-version</span></span></code></pre></div>
+<h3 id="output-example">Output Example</h3>
+<figure>
+<img src="../images/java_version.png" alt="Java Version" />
+<figcaption aria-hidden="true">Java Version</figcaption>
+</figure>
+<p>The output should display something like:</p>
+<pre><code>openjdk version &quot;17.0.8&quot; 2024-01-10 LTS
+OpenJDK Runtime Environment
+OpenJDK 64-Bit Server VM</code></pre>
+<p>This confirms that Java 17 is successfully installed and linked on
+your system.</p>

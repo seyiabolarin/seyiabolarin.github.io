@@ -1,0 +1,47 @@
+<h1 id="step-4">Step 4</h1>
+<h2 id="dhis2-configuration">DHIS2 Configuration</h2>
+<p>Download the latest DHIS2 WAR file from the official DHIS2
+releases:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="at">-o</span> dhis.war https://releases.dhis2.org/2.39/dhis.war</span></code></pre></div>
+<p>Move the WAR file to the Tomcat webapps directory:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> dhis.war <span class="va">$CATALINA_HOME</span>/webapps/</span></code></pre></div>
+<h2 id="configure-dhis2-settings">Configure DHIS2 Settings</h2>
+<p>Create the DHIS2 home directory:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/dhis2_home</span></code></pre></div>
+<p>Create the DHIS2 configuration file:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/dhis2_home/dhis.conf</span></code></pre></div>
+<p>Add the following configuration:</p>
+<pre><code># PostgreSQL Configuration
+connection.url = jdbc:postgresql://localhost:5432/dhis2
+connection.username = dhis
+connection.password = dhis
+connection.driver_class = org.postgresql.Driver
+connection.dialect = org.hibernate.dialect.PostgreSQLDialect
+
+# Database Connection Pooling
+connection.pool.max_size = 80
+
+# Encryption Password (Change to a strong and unique password)
+encryption.password = StrongUniquePassword123
+
+# Server Configuration
+server.port = 8080
+
+# External Directory for File Storage
+system.external_dir = /home/dhis/config</code></pre>
+<h2 id="start-dhis2">Start DHIS2</h2>
+<p>Start the Tomcat server to run DHIS2:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">$CATALINA_HOME</span><span class="ex">/bin/startup.sh</span></span></code></pre></div>
+<h2 id="access-dhis2">Access DHIS2</h2>
+<p>Open your browser and navigate to:</p>
+<pre><code>http://localhost:8080/dhis</code></pre>
+<h3 id="login-page-example">Login Page Example</h3>
+<p>Access the DHIS2 login page and use the default credentials: -
+<strong>Username:</strong> admin - <strong>Password:</strong>
+district</p>
+<p>This confirms that DHIS2 is successfully configured and running.</p>

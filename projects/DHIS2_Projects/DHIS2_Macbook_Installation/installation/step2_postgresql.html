@@ -1,0 +1,59 @@
+<h1 id="step-2-postgresql-installation">Step 2: PostgreSQL
+Installation</h1>
+<h2 id="install-postgresql-14">2.1 Install PostgreSQL 14</h2>
+<p>Install PostgreSQL 14 using Homebrew:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install postgresql@14</span></code></pre></div>
+<p>Start the PostgreSQL service:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> services start postgresql@14</span></code></pre></div>
+<h2 id="verify-installation">2.2 Verify Installation</h2>
+<p>Check the version to ensure PostgreSQL is installed correctly:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">--version</span></span></code></pre></div>
+<h3 id="output-example">Output Example</h3>
+<figure>
+<img src="../images/postgres_version.png" alt="PostgreSQL Version" />
+<figcaption aria-hidden="true">PostgreSQL Version</figcaption>
+</figure>
+<p>The output should display something like:</p>
+<pre><code>psql (PostgreSQL) 14.5</code></pre>
+<h2 id="install-pgadmin-gui-interface">2.3 Install pgAdmin (GUI
+Interface)</h2>
+<p>pgAdmin provides a graphical interface to manage your PostgreSQL
+databases. Install pgAdmin using Homebrew:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> pgadmin4</span></code></pre></div>
+<h3 id="launch-pgadmin">Launch pgAdmin</h3>
+<p>Open pgAdmin from your Applications or via Terminal:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">open</span> /Applications/pgAdmin\ 4.app</span></code></pre></div>
+<h3 id="link-postgresql-to-pgadmin">Link PostgreSQL to pgAdmin</h3>
+<ol type="1">
+<li>Open pgAdmin and create a new server connection.</li>
+<li>Enter the following details:
+<ul>
+<li><strong>Name:</strong> DHIS2 Database</li>
+<li><strong>Host:</strong> localhost</li>
+<li><strong>Port:</strong> 5432</li>
+<li><strong>Username:</strong> dhis</li>
+<li><strong>Password:</strong> dhis</li>
+</ul></li>
+<li>Click <strong>Save</strong> to connect.</li>
+</ol>
+<h2 id="create-a-user-and-database">2.4 Create a User and Database</h2>
+<p>Create a new user named ‘dhis’:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">createuser</span> <span class="at">-s</span> dhis</span></code></pre></div>
+<p>Set the password for the user:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-c</span> <span class="st">&quot;ALTER USER dhis WITH PASSWORD &#39;dhis&#39;;&quot;</span></span></code></pre></div>
+<p>Create a new database owned by the user:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">createdb</span> <span class="at">-O</span> dhis dhis2</span></code></pre></div>
+<h3 id="verify-the-database-in-pgadmin">Verify the Database in
+pgAdmin</h3>
+<p>Open pgAdmin and navigate to <strong>Servers → DHIS2 Database →
+Databases</strong> to see your new database.</p>
+<p>This confirms that PostgreSQL 14 and pgAdmin are successfully
+installed and configured.</p>

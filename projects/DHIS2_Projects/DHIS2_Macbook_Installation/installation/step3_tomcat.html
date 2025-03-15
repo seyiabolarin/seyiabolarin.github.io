@@ -1,0 +1,31 @@
+<h1 id="step-3-tomcat-server-configuration">Step 3: Tomcat Server
+Configuration</h1>
+<h2 id="install-tomcat">3.1 Install Tomcat</h2>
+<p>Install Apache Tomcat using Homebrew:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install tomcat</span></code></pre></div>
+<p>Verify the installation:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">catalina</span> version</span></code></pre></div>
+<h3 id="output-example">Output Example</h3>
+<figure>
+<img src="../images/tomcat_version.png" alt="Tomcat Version" />
+<figcaption aria-hidden="true">Tomcat Version</figcaption>
+</figure>
+<p>The output should display something like:</p>
+<pre><code>Server version: Apache Tomcat/9.0.71
+Server built:   Sep 20 2023</code></pre>
+<h2 id="set-environment-variables">3.2 Set Environment Variables</h2>
+<p>Add the following to your <code>~/.zshrc</code> file to set the
+<code>CATALINA_HOME</code> environment variable:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">CATALINA_HOME</span><span class="op">=</span><span class="va">$(</span><span class="ex">brew</span> <span class="at">--prefix</span><span class="va">)</span>/opt/tomcat/libexec</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span></code></pre></div>
+<h2 id="start-the-tomcat-server">3.3 Start the Tomcat Server</h2>
+<p>To start the Tomcat server, run:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">$CATALINA_HOME</span><span class="ex">/bin/startup.sh</span></span></code></pre></div>
+<p>Access the Tomcat homepage to verify the setup:</p>
+<pre><code>http://localhost:8080/</code></pre>
+<p>This confirms that the Apache Tomcat server is successfully installed
+and configured.</p>
