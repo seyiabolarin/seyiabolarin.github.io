@@ -211,6 +211,16 @@
     </div>
 
     <script>
+        function toggleSteps() {
+            const steps = document.getElementById("installation-steps");
+            // Toggle between showing and hiding the steps
+            if (steps.style.display === "none" || steps.style.display === "") {
+                steps.style.display = "block";
+            } else {
+                steps.style.display = "none";
+            }
+        }
+    
         async function loadMarkdown(file) {
             const response = await fetch(file);
             const text = await response.text();
