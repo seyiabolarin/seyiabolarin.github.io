@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>My Portfolio</title>
@@ -12,6 +7,30 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body {
+					font-family: Arial, sans-serif;
+					margin: 0;
+					padding: 20px;
+					background-color: #f4f4f4;
+			}
+			.story-grid {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+					gap: 15px;
+			}
+			.story-item {
+					background-color: white;
+					border-radius: 10px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+					overflow: hidden;
+			}
+			video, img {
+					width: '400';
+					height: "225";
+					display: block;
+			}
+	</style>
 	</head>
 	<body class="is-preload">
 
@@ -93,65 +112,198 @@
 
 						<!-- Posts -->
 							<section class="posts">
+								<div class="story-grid"></div>
+								<div class="story-item"></div>
 								<article>
 									<header>
-										<span class="date">April 24, 2024</span>
-										<h2><a href="#">Data Use Digital Forum<br />
-										Speaking on the Importance of MIS</a></h2>
+											<span class="date">May 22 - 24, 2024</span>
+											<h2><a href="#">2024 Digital and Data Use Forum<br />
+												<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">Community level interventions through digital solutions</span>
+										</a></h2>
 									</header>
-									<a href="#" class="image fit">
-										<video width="100%" autoplay controls>
-												<source src="images/video1.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-										</video>
-								</a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+											<a href="#" class="image fit">
+													<video width="400" height="225" autostop controls>
+															<source src="images/video1.mp4" controls>
+															Your browser does not support the video tag.
+													</video>
+											</a>
+									</div>
+									<!-- Full Story Button -->
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+										<li>
+												<button onclick="toggleStory1()" id="viewFullStoryButton1" class="button">View Full Story</button>
+										</li>
+								</ul>
+						
+								<!-- Article Text (Initially Hidden) -->
+								<div id="fullStory1" style="display: none;">
+											<p>The Digital and Data Use Forum, held from May 22 to 24, 2024, was organized by Palladium International as part of the Data.FI Project. The forum brought together data professionals, health experts, and stakeholders to explore innovative approaches to community-level interventions through digital solutions.</p>
+											<p>One of the key sessions at the forum focused on the integration of the National Orphans and Vulnerable Children Management Information System (NOMIS) as a robust Management Information System (MIS) that plays a pivotal role in public health data management. I had the privilege of being a speaker during this session, where I discussed the critical role of NOMIS in enhancing data-driven decision-making and its interoperability with other public health systems.</p>
+											<p>During my presentation, I highlighted how NOMIS has transformed data management for vulnerable populations by enabling efficient tracking and reporting of health and social service outcomes. The session also emphasized the importance of leveraging digital solutions to foster multi-sectoral collaboration and ensure accurate data concurrence across systems.</p>
+											<p>The forum served as a valuable platform to share best practices, successful use cases, and insights into strengthening community-level programs through data use and digital innovation.</p>
+									</div>
+									<!-- Toggle Script -->
+									<script>
+										function toggleStory1() {
+												const fullStory = document.getElementById("fullStory1");
+												const button = document.getElementById("viewFullStoryButton1");
+												if (fullStory.style.display === "none" || fullStory.style.display === "") {
+														fullStory.style.display = "block";
+														button.textContent = "Hide Full Story";
+												} else {
+														fullStory.style.display = "none";
+														button.textContent = "View Full Story";
+												}
+										}
+								</script>
+									</article>
+									<article>
+										<header>
+												<span class="date">November 14 - 16, 2024</span>
+												<h2 onclick="toggleStory2()" style="cursor: pointer;">
+													<a href="#" style="color: inherit; text-decoration: none;">
+															2024 NISA and GIS Conference<br />
+															<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+																	Transforming health with digital solutions & GIS micro-planning tool
+															</span>
+													</a>
+											</h2>
+										</header>
+										<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+												<a href="#" class="image fit">
+														<video width="400" height="225" autostop controls>
+																<source src="images/video2.mp4" type="video/mp4">
+																Your browser does not support the video tag.
+														</video>
+												</a>
+										</div>
+								
+										<!-- Full Story Button -->
+										<ul class="actions special">
+											<li>
+													<button onclick="toggleStory2()" id="viewFullStoryButton2" class="button">View Full Story</button>
+											</li>
 									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 22, 2017</span>
-										<h2><a href="#">Primis eget<br />
-										imperdiet lorem</a></h2>
-									</header>
-									<a href="#" class="image fit">
-										<video width="100%" autoplay controls>
-												<source src="images/video2.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-										</video>
-								</a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+								
+										<!-- Article Text (Initially Hidden) -->
+										<div id="fullStory2" style="display: none;">
+												<p>The Nigeria Implementation Science Alliance (NISA) and Global Implementation Science (GIS) Conference, held from November 14 to 16, 2024, served as a significant platform for data and public health professionals to discuss the impact of digital interventions on health outcomes. The conference highlighted innovative strategies for leveraging digital tools to enhance health service delivery and data-driven decision-making.</p>
+								
+												<p>One of the most impactful sessions at the conference focused on the transformative power of GIS-enabled Digital Micro-Planning tools in advancing health outcomes. I had the privilege of being a panel speaker at this session, where I shared insights on the GIS-enabled MIS tool developed to track COVID-19 vaccination coverage across the country and to monitor the emergence and spread of Lassa fever in Edo State.</p>
+								
+												<p>During my presentation, I demonstrated how the tool has significantly strengthened data accuracy and timeliness by integrating spatial data with health service delivery. The tool has been instrumental in enabling precise micro-planning, which supports targeted vaccination campaigns and rapid response to outbreaks. The session attracted a lot of interest from participants who were keen to learn how the tool could be adapted and scaled for other health and development initiatives.</p>
+								
+												<p>The NISA-GIS 2024 Conference provided an invaluable opportunity to share success stories and explore innovative solutions for advancing public health outcomes through digital interventions.</p>
+										</div>
+								
+										<!-- Toggle Script -->
+										<script>
+											function toggleStory2() {
+													const fullStory = document.getElementById("fullStory2");
+													const button = document.getElementById("viewFullStoryButton2");
+													if (fullStory.style.display === "none" || fullStory.style.display === "") {
+															fullStory.style.display = "block";
+															button.textContent = "Hide Full Story";
+													} else {
+															fullStory.style.display = "none";
+															button.textContent = "View Full Story";
+													}
+											}
+									</script>
+							<div class="story-grid"></div>
+							<div style="display: flex; gap: 10px; justify-content: right; align-items: right;">
+
+									<article>
+										<header>
+												<span class="date">May 22 - 24, 2024</span>
+												<h2><a href="#">2024 Digital and Data Use Forum<br />
+													<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">Image1</span>
+											</a></h2>
+										</header>
+										<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+											<a href="#" class="image fit">
+													<img src="images/pic04.jpg" alt="" style="width: 400px; height: auto;" />
+											</a>
+										</div>
+										<!-- Full Story Button -->
+										<ul class="actions special">
+											<li>
+													<button onclick="toggleStory1()" id="viewFullStoryButton1" class="button">View Full Story</button>
+											</li>
 									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
+							
+									<!-- Article Text (Initially Hidden) -->
+									<div id="fullStory1" style="display: none;">
+												<p>The Digital and Data Use Forum, held from May 22 to 24, 2024, was organized by Palladium International as part of the Data.FI Project. The forum brought together data professionals, health experts, and stakeholders to explore innovative approaches to community-level interventions through digital solutions.</p>
+												<p>One of the key sessions at the forum focused on the integration of the National Orphans and Vulnerable Children Management Information System (NOMIS) as a robust Management Information System (MIS) that plays a pivotal role in public health data management. I had the privilege of being a speaker during this session, where I discussed the critical role of NOMIS in enhancing data-driven decision-making and its interoperability with other public health systems.</p>
+												<p>During my presentation, I highlighted how NOMIS has transformed data management for vulnerable populations by enabling efficient tracking and reporting of health and social service outcomes. The session also emphasized the importance of leveraging digital solutions to foster multi-sectoral collaboration and ensure accurate data concurrence across systems.</p>
+												<p>The forum served as a valuable platform to share best practices, successful use cases, and insights into strengthening community-level programs through data use and digital innovation.</p>
+										</div>
+										<!-- Toggle Script -->
+										<script>
+											function toggleStory1() {
+													const fullStory = document.getElementById("fullStory1");
+													const button = document.getElementById("viewFullStoryButton1");
+													if (fullStory.style.display === "none" || fullStory.style.display === "") {
+															fullStory.style.display = "block";
+															button.textContent = "Hide Full Story";
+													} else {
+															fullStory.style.display = "none";
+															button.textContent = "View Full Story";
+													}
+											}
+									</script>
+									
+								</article>	
+									.........................
+    							<div class="story-item">
+									</div>
+
+									
+									<article>
+											<header>
+													<span class="date">May 22 - 24, 2024</span>
+													<h2><a href="#">2024 Digital and Data Use Forum<br />
+														<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">Image1</span>
+												</a></h2>
+											</header>
+											<div style="display: flex; gap: 10px; justify-content: right; align-items: right;">
+												<a href="#" class="image fit">
+														<img src="images/pic05.jpg" alt="" style="width: 400px; height: auto;" />
+												</a>
+											</div>
+											<!-- Full Story Button -->
+											<ul class="actions special">
+												<li>
+														<button onclick="toggleStory1()" id="viewFullStoryButton1" class="button">View Full Story</button>
+												</li>
+										</ul>
+								
+										<!-- Article Text (Initially Hidden) -->
+										<div id="fullStory1" style="display: none;">
+													<p>The Digital and Data Use Forum, held from May 22 to 24, 2024, was organized by Palladium International as part of the Data.FI Project. The forum brought together data professionals, health experts, and stakeholders to explore innovative approaches to community-level interventions through digital solutions.</p>
+													<p>One of the key sessions at the forum focused on the integration of the National Orphans and Vulnerable Children Management Information System (NOMIS) as a robust Management Information System (MIS) that plays a pivotal role in public health data management. I had the privilege of being a speaker during this session, where I discussed the critical role of NOMIS in enhancing data-driven decision-making and its interoperability with other public health systems.</p>
+													<p>During my presentation, I highlighted how NOMIS has transformed data management for vulnerable populations by enabling efficient tracking and reporting of health and social service outcomes. The session also emphasized the importance of leveraging digital solutions to foster multi-sectoral collaboration and ensure accurate data concurrence across systems.</p>
+													<p>The forum served as a valuable platform to share best practices, successful use cases, and insights into strengthening community-level programs through data use and digital innovation.</p>
+											</div>
+											<!-- Toggle Script -->
+											<script>
+												function toggleStory1() {
+														const fullStory = document.getElementById("fullStory1");
+														const button = document.getElementById("viewFullStoryButton1");
+														if (fullStory.style.display === "none" || fullStory.style.display === "") {
+																fullStory.style.display = "block";
+																button.textContent = "Hide Full Story";
+														} else {
+																fullStory.style.display = "none";
+																button.textContent = "View Full Story";
+														}
+												}
+										</script>
+											</article>	
+
+						</div>
 									<header>
 										<span class="date">April 11, 2017</span>
 										<h2><a href="#">Odio magna<br />
@@ -163,18 +315,7 @@
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
 								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
+								
 							</section>
 
 						<!-- Footer -->
