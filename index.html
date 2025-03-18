@@ -8,29 +8,56 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			body {
-					font-family: Arial, sans-serif;
-					margin: 0;
-					padding: 20px;
-					background-color: #f4f4f4;
+			.posts {
+					width: 100%;
+					margin: 0 auto;
 			}
-			.story-grid {
-					display: grid;
-					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-					gap: 15px;
+			
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    gap: 20px;
+    justify-content: left;
+}
+
+.story-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures it takes full width of the grid cell */
+}
+			
+			.story-content h2 a {
+					text-decoration: none;
+					color: #333;
 			}
-			.story-item {
-					background-color: white;
-					border-radius: 10px;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-					overflow: hidden;
-			}
-			video, img {
-					width: '400';
+			
+			.image.fit video {
+					width: 100%;
 					height: "225";
-					display: block;
+					border-radius: 8px;
 			}
-	</style>
+			
+			footer {
+					text-align: center;
+					margin-top: 10px;
+			}
+			
+			.toggle-button {
+					display: inline-block;
+					padding: 8px 16px;
+					background-color: #333;
+					color: #fff;
+					text-decoration: none;
+					border-radius: 4px;
+					transition: background-color 0.3s ease;
+			}
+			
+			.toggle-button:hover {
+					background-color: #555;
+			}
+			</style>
 	</head>
 	<body class="is-preload">
 
@@ -111,254 +138,630 @@
 							</article>
 
 						<!-- Posts -->
-							<section class="posts">
-								<div class="story-grid"></div>
-								<div class="story-item"></div>
-								<article>
-									<header>
-											<span class="date">May 22 - 24, 2024</span>
-											<h2><a href="#">2024 Digital and Data Use Forum<br />
-												<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">Community level interventions through digital solutions</span>
-										</a></h2>
-									</header>
-									<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
-											<a href="#" class="image fit">
-													<video width="400" height="225" autostop controls>
-															<source src="images/video1.mp4" controls>
-															Your browser does not support the video tag.
-													</video>
-											</a>
+						<section class="posts">
+							<div class="story-grid">
+									<!-- Story Item 1 -->
+									<div class="story-item">
+											<article>
+													<header>
+															<span class="date">May 7 - 9, 2024</span>
+															<div class="story-content">
+																	<h2>
+																			<a href="#">
+																					2024 NACA Nigeria HIV Prevention Conference<br />
+																					<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+																							Leveraging Information Technology to Accelerate HIV Prevention in Nigeria
+																					</span>
+																			</a>
+																	</h2>
+															</div>
+													</header>
+													<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+															<a href="#" class="image fit">
+																	<video width="400" height="225" autostop controls>
+																			<source src="images/video1.mp4" type="video/mp4">
+																			Your browser does not support the video tag.
+																	</video>
+															</a>
+													</div>
+													<footer>
+<!-- Full Story Button -->
+<ul class="actions special">
+	<li>
+			<button onclick="toggleStory1()" id="viewFullStoryButton1" class="button">View Full Story</button>
+	</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory1" style="display: none;">
+	<p>Leveraging Information Technology to Accelerate HIV Prevention in Nigeria was a prominent session at the 2024 Nigeria HIV Prevention Conference, organized by NACA from May 7th to 9th, 2024. As a panel speaker, I joined other experts in discussing how data-driven approaches and digital solutions have transformed HIV prevention strategies across the country.</p>
+	<p>During my presentation, I highlighted how data has tremendously helped Nigeria address the issues of fake clients, as well as understand and provide targeted support to children and families living with HIV. I shared insights on how leveraging health information systems has contributed to building trust and ensuring accuracy in client records, which directly supports more effective health interventions.</p>
+	<p>The panel session also explored innovative ways data can enhance collaboration among stakeholders and bridge existing gaps in HIV prevention programs. By sharing real-world examples and successful case studies, we emphasized the significance of integrating technology into public health initiatives to achieve long-lasting impact.</p>
+	<p>Being part of this panel of experts allowed me to exchange ideas and learn from other thought leaders, further reinforcing the collective effort to accelerate HIV prevention through digital transformation and data-driven insights.</p>
+</div>
+
+<!-- Toggle Script -->
+<script>
+	function toggleStory1() {
+			const fullStory = document.getElementById("fullStory1");
+			const button = document.getElementById("viewFullStoryButton1");
+			if (fullStory.style.display === "none" || fullStory.style.display === "") {
+					fullStory.style.display = "block";
+					button.textContent = "Hide Full Story";
+			} else {
+					fullStory.style.display = "none";
+					button.textContent = "View Full Story";
+			}
+	}
+</script>
+													</footer>
+											</article>
 									</div>
-									<!-- Full Story Button -->
-									<ul class="actions special">
-										<li>
-												<button onclick="toggleStory1()" id="viewFullStoryButton1" class="button">View Full Story</button>
-										</li>
-								</ul>
-						
-								<!-- Article Text (Initially Hidden) -->
-								<div id="fullStory1" style="display: none;">
-											<p>The Digital and Data Use Forum, held from May 22 to 24, 2024, was organized by Palladium International as part of the Data.FI Project. The forum brought together data professionals, health experts, and stakeholders to explore innovative approaches to community-level interventions through digital solutions.</p>
-											<p>One of the key sessions at the forum focused on the integration of the National Orphans and Vulnerable Children Management Information System (NOMIS) as a robust Management Information System (MIS) that plays a pivotal role in public health data management. I had the privilege of being a speaker during this session, where I discussed the critical role of NOMIS in enhancing data-driven decision-making and its interoperability with other public health systems.</p>
-											<p>During my presentation, I highlighted how NOMIS has transformed data management for vulnerable populations by enabling efficient tracking and reporting of health and social service outcomes. The session also emphasized the importance of leveraging digital solutions to foster multi-sectoral collaboration and ensure accurate data concurrence across systems.</p>
-											<p>The forum served as a valuable platform to share best practices, successful use cases, and insights into strengthening community-level programs through data use and digital innovation.</p>
+					
+									<!-- Story Item 2 -->
+									<div class="story-item">
+											<article>
+													<header>
+															<span class="date">November 14 - 16, 2024</span>
+															<div class="story-content">
+																	<h2>
+																			<a href="#">
+																				2024 NISA and GIS Conference<br />
+																					<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+																						Transforming health with digital solutions & GIS micro-planning tool
+																					</span>
+																			</a>
+																	</h2>
+															</div>
+													</header>
+													<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+															<a href="#" class="image fit">
+																	<video width="400" height="225" autostop controls>
+																			<source src="images/video2.mp4" type="video/mp4">
+																			Your browser does not support the video tag.
+																	</video>
+															</a>
+													</div>
+													<footer>
+															<!-- Full Story Button -->
+<ul class="actions special">
+	<li>
+			<button onclick="toggleStory2()" id="viewFullStoryButton2" class="button">View Full Story</button>
+	</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory2" style="display: none;">
+	<p>The Nigeria Implementation Science Alliance (NISA) and Global Implementation Science (GIS) Conference, held from November 14 to 16, 2024, served as a significant platform for data and public health professionals to discuss the impact of digital interventions on health outcomes. The conference highlighted innovative strategies for leveraging digital tools to enhance health service delivery and data-driven decision-making.</p>
+	<p>One of the most impactful sessions at the conference focused on the transformative power of GIS-enabled Digital Micro-Planning tools in advancing health outcomes. I had the privilege of being a panel speaker at this session, where I shared insights on the GIS-enabled MIS tool developed to track COVID-19 vaccination coverage across the country and to monitor the emergence and spread of Lassa fever in Edo State.</p>
+	<p>During my presentation, I demonstrated how the tool has significantly strengthened data accuracy and timeliness by integrating spatial data with health service delivery. The tool has been instrumental in enabling precise micro-planning, which supports targeted vaccination campaigns and rapid response to outbreaks. The session attracted a lot of interest from participants who were keen to learn how the tool could be adapted and scaled for other health and development initiatives.</p>
+	<p>The NISA-GIS 2024 Conference provided an invaluable opportunity to share success stories and explore innovative solutions for advancing public health outcomes through digital interventions.</p>
+</div>
+
+<!-- Toggle Script -->
+<script>
+	function toggleStory2() {
+			const fullStory = document.getElementById("fullStory2");
+			const button = document.getElementById("viewFullStoryButton2");
+			if (fullStory.style.display === "none" || fullStory.style.display === "") {
+					fullStory.style.display = "block";
+					button.textContent = "Hide Full Story";
+			} else {
+					fullStory.style.display = "none";
+					button.textContent = "View Full Story";
+			}
+	}
+</script>
+													</footer>
+											</article>
 									</div>
-									<!-- Toggle Script -->
-									<script>
-										function toggleStory1() {
-												const fullStory = document.getElementById("fullStory1");
-												const button = document.getElementById("viewFullStoryButton1");
-												if (fullStory.style.display === "none" || fullStory.style.display === "") {
-														fullStory.style.display = "block";
-														button.textContent = "Hide Full Story";
-												} else {
-														fullStory.style.display = "none";
-														button.textContent = "View Full Story";
-												}
-										}
-								</script>
-									</article>
-									<article>
-										<header>
-												<span class="date">November 14 - 16, 2024</span>
-												<h2 onclick="toggleStory2()" style="cursor: pointer;">
-													<a href="#" style="color: inherit; text-decoration: none;">
-															2024 NISA and GIS Conference<br />
-															<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
-																	Transforming health with digital solutions & GIS micro-planning tool
-															</span>
+
+					        <!-- Story Item 3 -->
+									<div class="story-item">
+										<article>
+												<header>
+														<span class="date">May 7 - 9, 2024</span>
+														<div class="story-content">
+																<h2>
+																		<a href="#">
+																			Smiles, Moments, and Memories!<br />
+																				<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+																					Moments with Jenny Nwanza (Palladium - Data.FI Senior Technical Advisor) and Jennifer Chapman (Palladium - Data.FI Project Director)
+																				</span>
+																		</a>
+																</h2>
+														</div>
+												</header>
+												<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+														<a href="#" class="image fit">
+															<img src="images/pic05.jpg" width="400" height= autofit, alt="Story Image">
 													</a>
-											</h2>
-										</header>
-										<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
-												<a href="#" class="image fit">
-														<video width="400" height="225" autostop controls>
-																<source src="images/video2.mp4" type="video/mp4">
-																Your browser does not support the video tag.
-														</video>
-												</a>
-										</div>
-								
-										<!-- Full Story Button -->
-										<ul class="actions special">
-											<li>
-													<button onclick="toggleStory2()" id="viewFullStoryButton2" class="button">View Full Story</button>
-											</li>
-									</ul>
-								
-										<!-- Article Text (Initially Hidden) -->
-										<div id="fullStory2" style="display: none;">
-												<p>The Nigeria Implementation Science Alliance (NISA) and Global Implementation Science (GIS) Conference, held from November 14 to 16, 2024, served as a significant platform for data and public health professionals to discuss the impact of digital interventions on health outcomes. The conference highlighted innovative strategies for leveraging digital tools to enhance health service delivery and data-driven decision-making.</p>
-								
-												<p>One of the most impactful sessions at the conference focused on the transformative power of GIS-enabled Digital Micro-Planning tools in advancing health outcomes. I had the privilege of being a panel speaker at this session, where I shared insights on the GIS-enabled MIS tool developed to track COVID-19 vaccination coverage across the country and to monitor the emergence and spread of Lassa fever in Edo State.</p>
-								
-												<p>During my presentation, I demonstrated how the tool has significantly strengthened data accuracy and timeliness by integrating spatial data with health service delivery. The tool has been instrumental in enabling precise micro-planning, which supports targeted vaccination campaigns and rapid response to outbreaks. The session attracted a lot of interest from participants who were keen to learn how the tool could be adapted and scaled for other health and development initiatives.</p>
-								
-												<p>The NISA-GIS 2024 Conference provided an invaluable opportunity to share success stories and explore innovative solutions for advancing public health outcomes through digital interventions.</p>
-										</div>
-								
-										<!-- Toggle Script -->
-										<script>
-											function toggleStory2() {
-													const fullStory = document.getElementById("fullStory2");
-													const button = document.getElementById("viewFullStoryButton2");
-													if (fullStory.style.display === "none" || fullStory.style.display === "") {
-															fullStory.style.display = "block";
-															button.textContent = "Hide Full Story";
-													} else {
-															fullStory.style.display = "none";
-															button.textContent = "View Full Story";
-													}
-											}
-									</script>
-							<div class="story-grid"></div>
-							<div style="display: flex; gap: 10px; justify-content: right; align-items: right;">
+												</div>
+												<footer>
+														<!-- Full Story Button -->
+<ul class="actions special">
+	<li>
+			<button onclick="toggleStory3()" id="viewFullStoryButton3" class="button">View Full Story</button>
+	</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory3" style="display: none;">
+	<p>In October 2022, Palladium Data.FI Nigeria welcomed two distinguished guests from Palladium International's Data.FI project Washington Office: Senior Technical Advisor Jenny Nwanza and Project Director Jennifer Chapman. During their visit, I had the privilege of escorting them to the National OVC Situation Room, where they attended the Monthly Situation Room Meeting.</p>
+	<p>The National OVC Situation Room serves as a central hub for reviewing data from all PEPFAR and non-PEPFAR OVC Implementing Partners across Nigeria's 36 states. Built by Palladium International through the Data.FI project which was funded by USAID, the Situation Room is housed at the Federal Ministry of Women Affairs (FMWA), the official custodian of all OVC data in the country.</p>
+	<p>As part of my role as the Strategic Information Advisor, I am responsible for providing continuous capacity building to FMWA staff, including training on data management and visualization. Additionally, I conduct the Monthly Data Analysis and visualization of all submitted data to ensure accurate and insightful reporting. The visit was an excellent opportunity to demonstrate the impact of the Situation Room in promoting data-driven decision-making and evidence-based program implementation.</p>
+	<p>One of the highlights of the visit was learning from Jenny Nwanza herself, as she shared in-depth insights into advanced data use, further enriching our approach to data management and analysis. It was truly a valuable experience that reinforced the importance of leveraging data to improve program outcomes and make strategic decisions.</p>
+</div>
 
-									<article>
+<!-- Toggle Script -->
+<script>
+	function toggleStory3() {
+			const fullStory = document.getElementById("fullStory3");
+			const button = document.getElementById("viewFullStoryButton3");
+			if (fullStory.style.display === "none" || fullStory.style.display === "") {
+					fullStory.style.display = "block";
+					button.textContent = "Hide Full Story";
+			} else {
+					fullStory.style.display = "none";
+					button.textContent = "View Full Story";
+			}
+	}
+</script>
+												</footer>
+										</article>
+									</div>
+
+										<!-- Story Item 4 -->
+									<div class="story-item">
+										<article>
+												<header>
+														<span class="date">November 14 - 16, 2024</span>
+														<div class="story-content">
+																<h2>
+																		<a href="#">
+																			2024 NISA and GIS Conference<br />
+																				<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+																					Conference Crew Vibes: Capturing the Energy with an Epic Group Photo!
+																				</span>
+																		</a>
+																</h2>
+														</div>
+												</header>
+												<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+													<a href="#" class="image fit">
+														<img src="images/pic04.jpg" width="400" height= autofit, alt="Story Image">
+												</a>
+												</div>
+												<footer>
+														<!-- Full Story Button -->
+<ul class="actions special">
+	<li>
+			<button onclick="toggleStory4()" id="viewFullStoryButton4" class="button">View Full Story</button>
+	</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory4" style="display: none;">
+<p>The 2024 NISA GIS Conference was nothing short of unforgettable! One of the most memorable experiences was the vibrant group photo session with our South Korean participants — a true celebration of collaboration and camaraderie. The energy was unmatched as everyone came together to capture the moment, beaming with pride and excitement.</p>
+<p>But that wasn’t all! The conference had its fair share of epic moments, from the elegant curtail dinner where delicious cuisine met great conversations, to the award night presentation that recognized outstanding achievements and hard work. The cultural diversity heritage dance stole the spotlight, showcasing mesmerizing performances that beautifully highlighted our global community. We couldn’t stop laughing during the drama and jokes segment, which kept the atmosphere light and lively.</p>
+<p>All in all, the 2024 NISA GIS Conference was a whirlwind of inspiration, learning, and connection. We walked away not only with new insights but also with amazing memories and friendships that will last a lifetime!</p>
+</div>
+
+<!-- Toggle Script -->
+<script>
+	function toggleStory4() {
+			const fullStory = document.getElementById("fullStory4");
+			const button = document.getElementById("viewFullStoryButton4");
+			if (fullStory.style.display === "none" || fullStory.style.display === "") {
+					fullStory.style.display = "block";
+					button.textContent = "Hide Full Story";
+			} else {
+					fullStory.style.display = "none";
+					button.textContent = "View Full Story";
+			}
+	}
+</script>
+												</footer>
+										</article>
+							</div>
+
+							<!-- Story Item 5 -->
+							<div class="story-item">
+								<article>
 										<header>
-												<span class="date">May 22 - 24, 2024</span>
-												<h2><a href="#">2024 Digital and Data Use Forum<br />
-													<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">Image1</span>
-											</a></h2>
+												<span class="date">September 2022</span>
+												<div class="story-content">
+														<h2>
+																<a href="#">
+																	National Orphans and Vulnerable Children Pilot Survey<br />
+																		<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+																			Unforgettable Adventures with Amazing Kids in the Heart of Shelleng!
+																		</span>
+																</a>
+														</h2>
+												</div>
 										</header>
 										<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
 											<a href="#" class="image fit">
-													<img src="images/pic04.jpg" alt="" style="width: 400px; height: auto;" />
-											</a>
+												<img src="images/pic06.jpg" width="400" height= autofit, alt="Story Image">
+										</a>
 										</div>
-										<!-- Full Story Button -->
-										<ul class="actions special">
-											<li>
-													<button onclick="toggleStory1()" id="viewFullStoryButton1" class="button">View Full Story</button>
-											</li>
-									</ul>
-							
-									<!-- Article Text (Initially Hidden) -->
-									<div id="fullStory1" style="display: none;">
-												<p>The Digital and Data Use Forum, held from May 22 to 24, 2024, was organized by Palladium International as part of the Data.FI Project. The forum brought together data professionals, health experts, and stakeholders to explore innovative approaches to community-level interventions through digital solutions.</p>
-												<p>One of the key sessions at the forum focused on the integration of the National Orphans and Vulnerable Children Management Information System (NOMIS) as a robust Management Information System (MIS) that plays a pivotal role in public health data management. I had the privilege of being a speaker during this session, where I discussed the critical role of NOMIS in enhancing data-driven decision-making and its interoperability with other public health systems.</p>
-												<p>During my presentation, I highlighted how NOMIS has transformed data management for vulnerable populations by enabling efficient tracking and reporting of health and social service outcomes. The session also emphasized the importance of leveraging digital solutions to foster multi-sectoral collaboration and ensure accurate data concurrence across systems.</p>
-												<p>The forum served as a valuable platform to share best practices, successful use cases, and insights into strengthening community-level programs through data use and digital innovation.</p>
-										</div>
-										<!-- Toggle Script -->
-										<script>
-											function toggleStory1() {
-													const fullStory = document.getElementById("fullStory1");
-													const button = document.getElementById("viewFullStoryButton1");
-													if (fullStory.style.display === "none" || fullStory.style.display === "") {
-															fullStory.style.display = "block";
-															button.textContent = "Hide Full Story";
-													} else {
-															fullStory.style.display = "none";
-															button.textContent = "View Full Story";
-													}
-											}
-									</script>
-									
-								</article>	
-									.........................
-    							<div class="story-item">
-									</div>
+										<footer>
+												<!-- Full Story Button -->
+<ul class="actions special">
+<li>
+	<button onclick="toggleStory5()" id="viewFullStoryButton5" class="button">View Full Story</button>
+</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory5" style="display: none;">
+<p>Participating in the National OVC Pilot Survey across six states in Nigeria (Adamawa, Plateau, Osun, Enugu, Katsina, and Akwa Ibom) was an experience I'll never forget! As part of the data management team, I played a key role in developing data collection tools using the CSPro application and leading the data management efforts throughout the exercise. It was an incredible journey, collaborating with stakeholders from USAID, CDC, AONN, various Implementing Partners, and both Federal and State Ministry of Women Affairs representatives. One of the most memorable aspects was the series of advocacy visits to the Commissioners of Women Affairs in each state—an essential step in getting everyone on board for the project.</p>  
+<p>Stationed in Adamawa, I took on the daily task of tracking enumerators' progress, not just locally but across all six states. My role also involved hosting daily check-in meetings with other data managers to evaluate the day’s accomplishments and identify areas for improvement. It was a challenging but rewarding process that kept me on my toes every single day.</p>  
+<p>But amidst all the coordination and data tracking, the absolute highlight for me was spending time with the children in remote communities. Their vibrant energy and infectious laughter made every moment worthwhile. I couldn't help but pause, play, and just soak in the pure joy that they brought to the experience. From playful interactions to heartwarming conversations, I felt a deep sense of fulfillment knowing that my efforts were contributing to something meaningful for their future. It’s amazing how much happiness children can radiate even in the most remote places, and it reminded me why I’m so passionate about the work I do. Serving children and making an impact on their lives—no matter how small—is truly what drives me!</p>
+</div>
 
-									
-									<article>
-											<header>
-													<span class="date">May 22 - 24, 2024</span>
-													<h2><a href="#">2024 Digital and Data Use Forum<br />
-														<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">Image1</span>
-												</a></h2>
-											</header>
-											<div style="display: flex; gap: 10px; justify-content: right; align-items: right;">
-												<a href="#" class="image fit">
-														<img src="images/pic05.jpg" alt="" style="width: 400px; height: auto;" />
-												</a>
-											</div>
-											<!-- Full Story Button -->
-											<ul class="actions special">
-												<li>
-														<button onclick="toggleStory1()" id="viewFullStoryButton1" class="button">View Full Story</button>
-												</li>
-										</ul>
-								
-										<!-- Article Text (Initially Hidden) -->
-										<div id="fullStory1" style="display: none;">
-													<p>The Digital and Data Use Forum, held from May 22 to 24, 2024, was organized by Palladium International as part of the Data.FI Project. The forum brought together data professionals, health experts, and stakeholders to explore innovative approaches to community-level interventions through digital solutions.</p>
-													<p>One of the key sessions at the forum focused on the integration of the National Orphans and Vulnerable Children Management Information System (NOMIS) as a robust Management Information System (MIS) that plays a pivotal role in public health data management. I had the privilege of being a speaker during this session, where I discussed the critical role of NOMIS in enhancing data-driven decision-making and its interoperability with other public health systems.</p>
-													<p>During my presentation, I highlighted how NOMIS has transformed data management for vulnerable populations by enabling efficient tracking and reporting of health and social service outcomes. The session also emphasized the importance of leveraging digital solutions to foster multi-sectoral collaboration and ensure accurate data concurrence across systems.</p>
-													<p>The forum served as a valuable platform to share best practices, successful use cases, and insights into strengthening community-level programs through data use and digital innovation.</p>
-											</div>
-											<!-- Toggle Script -->
-											<script>
-												function toggleStory1() {
-														const fullStory = document.getElementById("fullStory1");
-														const button = document.getElementById("viewFullStoryButton1");
-														if (fullStory.style.display === "none" || fullStory.style.display === "") {
-																fullStory.style.display = "block";
-																button.textContent = "Hide Full Story";
-														} else {
-																fullStory.style.display = "none";
-																button.textContent = "View Full Story";
-														}
-												}
-										</script>
-											</article>	
-
-						</div>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
+<!-- Toggle Script -->
+<script>
+function toggleStory5() {
+	const fullStory = document.getElementById("fullStory5");
+	const button = document.getElementById("viewFullStoryButton5");
+	if (fullStory.style.display === "none" || fullStory.style.display === "") {
+			fullStory.style.display = "block";
+			button.textContent = "Hide Full Story";
+	} else {
+			fullStory.style.display = "none";
+			button.textContent = "View Full Story";
+	}
+}
+</script>
+										</footer>
 								</article>
-								
-							</section>
-
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-									<form action="https://formspree.io/f/mqapkjkd" method="POST">
-										<div class="fields">
-											<div class="field">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" placeholder="Your Name" required />
-											</div>
-											<div class="field">
-												<label for="email">Email</label>
-												<input type="email" name="email" id="email" placeholder="Your Email" required />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="3" placeholder="Your Message" required></textarea>
-											</div>
+					<!-- Story Item 6 -->
+					<div class="story-item">
+						<article>
+								<header>
+										<span class="date">September 2022</span>
+										<div class="story-content">
+												<h2>
+														<a href="#">
+															National Orphans and Vulnerable Children Pilot Survey<br />
+																<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+																	Heartwarming Adventures with the Little Legends of Shelleng!
+																</span>
+														</a>
+												</h2>
 										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-										</ul>
-									</form>
-								</ul>
+								</header>
+								<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+									<a href="#" class="image fit">
+										<img src="images/pic07.jpg" width="400" height= autofit, alt="Story Image">
+								</a>
+								</div>
+								<footer>
+										<!-- Full Story Button -->
+<ul class="actions special">
+<li>
+<button onclick="toggleStory6()" id="viewFullStoryButton6" class="button">View Full Story</button>
+</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory6" style="display: none;">
+<p>Shelleng LGA, Adamawa State—where adventure meets pure, unfiltered joy! I’ll never forget the day we arrived in this vibrant little village during the National OVC Pilot Survey. As usual, the kids were the first to greet us—eyes wide with curiosity and excitement, like they knew something special was about to happen. Little did they know, I had a few tricks up my sleeve to make their day unforgettable!</p>  
+<p>Amid the hustle of survey activities, I found myself drawn to the kids' boundless energy and contagious laughter. My heart ached when I saw that their only source of drinking water was a murky river—used for everything from cooking to washing. It hit me hard, and I couldn’t help but wonder how I could make their lives just a little bit brighter in that moment.</p>  
+<p>So, I did what I do best—I joined them! We kicked off an epic game of football right there on the dusty field, and trust me, these kids have serious skills. We laughed, cheered, and made up wild team names, and I have to admit, they almost ran circles around me. Then came my secret weapon—a game I invented on the spot that had them shrieking with delight. It was pure magic to see their faces light up, even just for a little while.</p>  
+<p>I also made it a point to visit some families and share a few stories, just listening to their experiences and learning more about their lives. There was something so genuine about the way they welcomed me, even with all the challenges they face daily. The love and resilience in that community are truly inspiring, and it reminded me of why I do what I do.</p>  
+<p>I left Shelleng with a heart full of gratitude and a promise to myself to return someday—hopefully with better solutions and improved support for those amazing kids. They may not know it, but they left a lasting mark on me, and I’ll carry their smiles and stories with me wherever I go.</p>
+</div>
+
+<!-- Toggle Script -->
+<script>
+function toggleStory6() {
+const fullStory = document.getElementById("fullStory6");
+const button = document.getElementById("viewFullStoryButton6");
+if (fullStory.style.display === "none" || fullStory.style.display === "") {
+	fullStory.style.display = "block";
+	button.textContent = "Hide Full Story";
+} else {
+	fullStory.style.display = "none";
+	button.textContent = "View Full Story";
+}
+}
+</script>
+								</footer>
+						</article>
+			</div>
+
+			<!-- Story Item 7 -->
+			<div class="story-item">
+				<article>
+						<header>
+								<span class="date">September 2022</span>
+								<div class="story-content">
+										<h2>
+												<a href="#">
+													Data Collection Field Experience<br />
+														<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+															Adventures in Garkida: Laughs, Games, and Unforgettable Moments with the Kids!
+														</span>
+												</a>
+										</h2>
+								</div>
+						</header>
+						<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+							<a href="#" class="image fit">
+								<img src="images/pic08.jpg" width="400" height= autofit, alt="Story Image">
+						</a>
+						</div>
+						<footer>
+								<!-- Full Story Button -->
+<ul class="actions special">
+<li>
+<button onclick="toggleStory7()" id="viewFullStoryButton7" class="button">View Full Story</button>
+</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory7" style="display: none;">
+<p>My data collection field experience took me on an adventurous journey from Yola in Adamawa State to Garkida village in Gombi LGA, Adamawa State. It was a daunting five-hour journey each way, and despite the challenges, I made the trip to and fro every day, working for barely four hours due to the security situation in the area. The reality of traveling through a red zone, known for security concerns and surrounded by the infamous Sambisa forest, did little to deter my determination.</p>  
+<p>Garkida is a resilient village, separated from Borno State by a winding river, and it has faced its fair share of hardships due to bandit activities. Yet, I knew that embarking on this one-week trip was essential to understanding the struggles of the women and children living there. My goal was to assess how we could better support and improve their livelihoods, no matter the risks involved.</p>  
+<p>Despite the gravity of the situation, my time with the children was truly heartwarming. Their energy and enthusiasm were infectious, and I couldn’t resist sharing some of the simple games I grew up playing as a kid. Teaching them new games and watching them light up with joy made every challenge along the way worthwhile. The bond we created during those moments was priceless.</p>  
+<p>Looking back, I would do it all over again in a heartbeat. I believe that children deserve every ounce of effort it takes to bring them joy and hope, no matter how far or how risky the journey may be. Garkida and its resilient spirit will always hold a special place in my heart.</p>
+
+</div>
+
+<!-- Toggle Script -->
+<script>
+function toggleStory7() {
+const fullStory = document.getElementById("fullStory7");
+const button = document.getElementById("viewFullStoryButton7");
+if (fullStory.style.display === "none" || fullStory.style.display === "") {
+fullStory.style.display = "block";
+button.textContent = "Hide Full Story";
+} else {
+fullStory.style.display = "none";
+button.textContent = "View Full Story";
+}
+}
+</script>
+						</footer>
+				</article>
+	</div>
+
+				<!-- Story Item 8 -->
+			<div class="story-item">
+				<article>
+						<header>
+								<span class="date">September 2022</span>
+								<div class="story-content">
+										<h2>
+												<a href="#">
+													Stakeholder engagement<br />
+														<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+															Igniting Hope in Garkida: Heartfelt Conversations with Community Leaders to Empower Women, Nurture Children, and Build a Resilient Future
+														</span>
+												</a>
+										</h2>
+								</div>
+						</header>
+						<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+							<a href="#" class="image fit">
+								<img src="images/pic09.jpg" width="400" height= autofit, alt="Story Image">
+						</a>
+						</div>
+						<footer>
+								<!-- Full Story Button -->
+<ul class="actions special">
+<li>
+<button onclick="toggleStory8()" id="viewFullStoryButton8" class="button">View Full Story</button>
+</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory8" style="display: none;">
+<p>Our journey to Garkida wasn’t just about the miles—it was about the mission. Traveling 5 hours from Yola to Garkida and back each day was no small feat, but the determination to connect with the community kept us going. The first step on arrival was a courtesy visit to the Chief of the land, where we shared our plans and agenda for the data collection exercise. The Chief's warm reception set the tone for the work ahead.</p>  
+<p>However, Garkida, being a predominantly Muslim community, posed a unique cultural challenge. The practice of **“Ba shiga”**—a Hausa term meaning *“no entry”*—restricts men from entering households where women are present without explicit permission. To respect this cultural norm while still achieving our mission, we had to gather all the male heads of households in a central location for an open conversation. It was the perfect opportunity to put my advocacy and stakeholder engagement skills to the test, and I couldn’t help but feel a sense of pride as I navigated the conversation with a touch of Hausa, thanks to the invaluable support of an interpreter. Seeing their faces light up with smiles as we connected was truly rewarding, reminding me that genuine effort and respect for their culture go a long way. </p>  
+<p>I approached the meeting with humor and warmth, easing any tension and bringing smiles to the faces of everyone present. My lighthearted approach created an atmosphere of openness and trust, allowing us to communicate effectively and lay the groundwork for the data collection process. It was a remarkable experience that highlighted the importance of cultural sensitivity and community collaboration. Despite the long journeys and the challenges, it was worth every effort, knowing that we were making a difference, one community at a time.</p>  
+</div>
+
+<!-- Toggle Script -->
+<script>
+function toggleStory8() {
+const fullStory = document.getElementById("fullStory8");
+const button = document.getElementById("viewFullStoryButton8");
+if (fullStory.style.display === "none" || fullStory.style.display === "") {
+fullStory.style.display = "block";
+button.textContent = "Hide Full Story";
+} else {
+fullStory.style.display = "none";
+button.textContent = "View Full Story";
+}
+}
+</script>
+							</footer>
+					</article>
+		</div>
+
+			<!-- Story Item 9 -->
+			<div class="story-item">
+				<article>
+						<header>
+								<span class="date">September 2024</span>
+								<div class="story-content">
+										<h2>
+												<a href="#">
+													DQA Training of Trainers<br />
+														<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+															Training on Data Quality Assessment (DQA) for Federal and State Ministry of Women Affairs Staff from 16 USAID supported States in Nigeria
+														</span>
+												</a>
+										</h2>
+								</div>
+						</header>
+						<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+							<a href="#" class="image fit">
+								<img src="images/pic10.jpg" width="400" height= autofit, alt="Story Image">
+						</a>
+						</div>
+						<footer>
+								<!-- Full Story Button -->
+<ul class="actions special">
+<li>
+<button onclick="toggleStory9()" id="viewFullStoryButton9" class="button">View Full Story</button>
+</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory9" style="display: none;">
+<p>The National Training on Data Quality Assessment for Federal and State Ministry of Women Affairs Staff from 16 USAID-supported states in Nigeria was a remarkable milestone in our journey towards strengthening the quality and accuracy of OVC data. As part of the transition from the ICHSSA award (2019–2024) to the new THRIVE award, it was crucial to ensure that all OVC data remained reliable and consistent. To achieve this, we designed a comprehensive training program aimed at equipping ministry staff with the necessary skills to conduct data quality assessments as they prepared to oversee the transitioning exercise.</p>  
+<p>I had the privilege of spearheading the development of the OVC Data Quality Assessment (DQA) Protocol ahead of the transitioning phase. This protocol was specifically crafted to guide the USAID Implementing Partners as they moved from the ICHSSA award to the THRIVE award, ensuring that data quality standards were upheld throughout the process. It was an immense responsibility, but with the collaborative effort of my dedicated team members, we were able to produce a robust and practical framework.</p>  
+<p>The training brought together representatives from both the Federal and State Ministry of Women Affairs across 16 USAID-supported states. It was designed to enhance their capacity to supervise and monitor the OVC DQA Transitioning exercise. During the sessions, we covered essential concepts, practical strategies, and hands-on exercises to build their proficiency in data quality assessment. We also emphasized the importance of consistent data verification, validation, and reporting to maintain data integrity during the transition.</p>  
+<p>It was truly fulfilling to see how the participants embraced the training with enthusiasm and dedication. We fostered an interactive learning environment, encouraging questions, discussions, and experience sharing among the participants. The atmosphere was charged with a strong sense of commitment to the cause, and it was clear that everyone was fully invested in ensuring the continuity of high-quality data for OVC program implementation.</p>  
+<p>Leading the training alongside my team members was a humbling and rewarding experience. It reinforced the significance of data quality in program management and highlighted the pivotal role that well-trained personnel play in sustaining accurate reporting practices. Together, we left the training confident that the Federal and State Ministry of Women Affairs staff were well-equipped to carry out their supervisory and monitoring duties during the OVC DQA transitioning exercise.</p>
+</div>
+
+<!-- Toggle Script -->
+<script>
+function toggleStory9() {
+const fullStory = document.getElementById("fullStory9");
+const button = document.getElementById("viewFullStoryButton9");
+if (fullStory.style.display === "none" || fullStory.style.display === "") {
+fullStory.style.display = "block";
+button.textContent = "Hide Full Story";
+} else {
+fullStory.style.display = "none";
+button.textContent = "View Full Story";
+}
+}
+</script>
+</footer>
+</article>
+</div>
+
+<!-- Story Item 10 -->
+<div class="story-item">
+	<article>
+			<header>
+					<span class="date">December 2024</span>
+					<div class="story-content">
+							<h2>
+									<a href="#">
+										DQA Field Exercise<br />
+											<span style="font-size: 1.25rem; font-weight: bold; text-transform: none; line-height: 1;">
+												Group photo with 65 Data Enumerators in Akwa Ibom State, celebrating the successful OVC DQA Transitioning Exercise!
+											</span>
+									</a>
+							</h2>
+					</div>
+			</header>
+			<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+				<a href="#" class="image fit">
+					<img src="images/pic11.jpg" width="400" height= autofit, alt="Story Image">
+			</a>
+			</div>
+			<footer>
+					<!-- Full Story Button -->
+<ul class="actions special">
+<li>
+<button onclick="toggleStory10()" id="viewFullStoryButton10" class="button">View Full Story</button>
+</li>
+</ul>
+<!-- Article Text (Initially Hidden) -->
+<div id="fullStory10" style="display: none;">
+<p>Leading the OVC Data Quality Assessment (DQA) Transitioning Exercise in Akwa Ibom State was an incredible experience! Alongside three dedicated team members, I had the privilege of guiding 65 passionate data enumerators—comprising about 40% women and 60% men—hailing from diverse cultural backgrounds but united by a common goal: ensuring data quality and accuracy. </p>
+<p>The exercise was comprehensive and demanding, involving the folder audit of all active OVC clients within the reporting period. We thoroughly assessed the Management Information System (MIS) NOMIS, generating and reviewing reports to match the records with what was reported in the master sheet submitted. Additionally, the exercise included household visits to HIV-positive clients whose documented phone numbers were unreachable, as well as phone calls to 5% of HIV-positive OVC clients to verify if they were truly receiving OVC support services from the implementing partners. For those whose phone numbers remained unreachable, a 3% sample was visited, provided they had a clearly documented address in their folders.</p>
+<p>Collaboration was key to our success, and we worked closely with community case workers managing the clients, as well as the Implementing Partners' M&E staff and the Community-Based Organization (CBO) M&E staff responsible for retrieving the folders for the audit. To streamline the process, I developed a dynamic real-time Power BI dashboard, integrated via API with the Kobo Toolbox, enabling us to track the enumerators' data assessment progress daily. </p>
+<p>The entire exercise spanned three weeks and was a remarkable success, thanks to the dedication and commitment of everyone involved. It was truly rewarding to witness the synergy and hard work put into ensuring accurate and reliable data—an accomplishment that left us all proud and motivated to keep making an impact!</p>
+</div>
+
+<!-- Toggle Script -->
+<script>
+function toggleStory10() {
+const fullStory = document.getElementById("fullStory10");
+const button = document.getElementById("viewFullStoryButton10");
+if (fullStory.style.display === "none" || fullStory.style.display === "") {
+fullStory.style.display = "block";
+button.textContent = "Hide Full Story";
+} else {
+fullStory.style.display = "none";
+button.textContent = "View Full Story";
+}
+}
+</script>
+</footer>
+</article>
+</div>
+					</section>
+
+						<!-- Footer -->
+						
+						<footer>
+							<!-- Pagination -->
+							<div class="pagination">
+									<a href="#" id="prevBtn" class="previous">Prev</a>
+									<a href="index.html" class="page" id="page1">1</a>
+									<a href="page2.html" class="page" id="page2">2</a>
+									<a href="page3.html" class="page" id="page3">3</a>
+									<span class="extra">&hellip;</span>
+									<a href="page8.html" class="page" id="page8">8</a>
+									<a href="page9.html" class="page" id="page9">9</a>
+									<a href="page10.html" class="page" id="page10">10</a>
+									<a href="#" id="nextBtn" class="next">Next</a>
+							</div>
+					</footer>
+					</div>
+
+					<!-- Script -->
+<script>
+	// Get the current page number from the URL
+	const currentPage = parseInt(window.location.pathname.match(/page(\d+)\.html/)?.[1] || 1);
+
+	// Get the Prev and Next buttons
+	const prevBtn = document.getElementById("prevBtn");
+	const nextBtn = document.getElementById("nextBtn");
+
+	// Set the Prev button link
+	if (currentPage > 1) {
+			const prevPage = currentPage === 2 ? "index.html" : `page${currentPage - 1}.html`;
+			prevBtn.href = prevPage;
+			prevBtn.classList.remove("disabled");
+	} else {
+			prevBtn.style.display = "none"; // Hide the Prev button on the first page
+	}
+
+	// Set the Next button link
+	if (currentPage < 10) {  // Adjust this number if you have more pages
+			const nextPage = `page${currentPage + 1}.html`;
+			nextBtn.href = nextPage;
+			nextBtn.classList.remove("disabled");
+	} else {
+			nextBtn.style.display = "none"; // Hide the Next button on the last page
+	}
+
+	// Highlight the active page number
+	const activePage = document.getElementById(`page${currentPage}`);
+	if (activePage) {
+			activePage.classList.add("active");
+	}
+</script>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+							<form action="https://formspree.io/f/mqapkjkd" method="POST">
+									<div class="fields" style="display: flex; flex-direction: column; gap: 10px;">
+											<div class="field" style="display: flex; flex-direction: column; align-items: flex-start;">
+													<label for="name" style="margin-bottom: 5px;">Name</label>
+													<input type="text" name="name" id="name" placeholder="Your Name" required style="width: 100%; padding: 8px;" />
+											</div>
+											<div class="field" style="display: flex; flex-direction: column; align-items: flex-start;">
+													<label for="email" style="margin-bottom: 5px;">Email</label>
+													<input type="email" name="email" id="email" placeholder="Your Email" required style="width: 100%; padding: 8px;" />
+											</div>
+											<div class="field" style="display: flex; flex-direction: column; align-items: flex-start;">
+													<label for="message" style="margin-bottom: 5px;">Message</label>
+													<textarea name="message" id="message" rows="3" placeholder="Your Message" required style="width: 100%; padding: 8px;"></textarea>
+											</div>
+									</div>
+									<ul class="actions" style="margin-top: 10px;">
+											<li><input type="submit" value="Send Message" style="padding: 8px 16px;" /></li>
+									</ul>
 							</form>
+					</section>
 						</section>
 						<section class="split contact">
 							<section class="alt">
