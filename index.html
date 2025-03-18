@@ -14,10 +14,15 @@
 			}
 			
 .story-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(450px, 1fr));
-    gap: 20px;
-    justify-content: left;
+	display: grid;
+grid-template-columns: repeat(2, minmax(460px, 1fr));
+gap: 20px;
+justify-content: left;
+
+@media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+}
 }
 
 .story-item {
