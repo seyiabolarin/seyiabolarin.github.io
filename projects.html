@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
     <title>Seyi Abolarin's Projects</title>
     <style>
         body {
@@ -16,38 +20,80 @@
 
         h1, h2, h3, h4 {
             color: #333;
+            text-align: center;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
+            color: #0077b6;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-top: 20px;
+            color: #0096c7;
         }
 
         h3, h4 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-top: 15px;
+            color: #023e8a;
         }
 
         p {
             margin: 10px 0;
+            text-align: center;
         }
+
+        ul {
+                list-style-type: square;
+                margin: 10px 0;
+                padding-left: 40px;
+            }
 
         .project-section {
             margin: 20px auto;
             max-width: 800px;
-            padding: 20px;
+            padding: 30px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
+
+        .social-links {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .social-links a {
+                margin: 0 15px;
+                text-decoration: none;
+                color: #0077b6;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            .social-links a:hover {
+                color: #0096c7;
+                text-decoration: underline;
+            }
+
+            .footer {
+                margin-top: 20px;
+                text-align: center;
+                color: #777;
+            }
+    
+            .highlight {
+            color: #0077b6;
+            font-weight: bold;
+            }
 
         .project {
             margin: 15px 0;
+            font-weight: bold;
+            color: #023e8a;
             padding: 10px;
             background-color: #e9f5ff;
             border-radius: 5px;
@@ -69,9 +115,52 @@
         }
     </style>
 </head>
-<body>
+<body class="is-preload">
+   
+    <!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Seyi Abolarin</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Me</a></li>
+							<li><a href="resume.html">Resume</a></li>
+                            <li class="active"><a href="projects.html">Projects</a></li>
+							<li><a href="blog.html">Blog Page</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="icons alt">
+							<li><a href="https://github.com/seyiabolarin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/seyiabolarin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li>
+								<a href="https://www.spatialnode.net/seyiabolarin">
+									<img src="assets/spatialnode.png" alt="Spatialnode" style="width: 16px; height: 16px; border-radius: 50%;">	
+								</a>
+							</li>
+							<li>
+								<a href="mailto:seyiabolarin@hotmail.com" class="icon solid alt fa-envelope">
+									<span class="label">Email</span>
+								</a>
+							</li>
+							<li><a href="tel:+2347031666261" class="icon solid alt fa-phone"><span class="label">Call me (best on mobile)</span></a></li>
+						</ul>
+					</nav>
+
+	<!-- Main -->
+	<div id="main">
+
+    <!-- About Me Content -->
+	<article class="post featured">
+	<div class="major">
     <h1>🚀 Seyi Abolarin's Projects</h1>
     <p>Explore my projects across various data analytics, visualization, geospatial, data management, and MIS technologies.</p>
+    </div>
 
     <!-- Management Information Systems Development -->
     <div class="project-section">
@@ -210,7 +299,27 @@
         </div>
     </div>
 
+    <!-- Copyright -->
+		<div id="copyright">
+		    <ul><li>&copy; seyiabolarin</li><li>Design: <a href="https://linkedin.com/in/seyiabolarin">LinkedIn</a></li></ul>
+		</div>
+			</div>
+
+            <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Include Showdown.js (Markdown to HTML conversion) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <!-- Combined Inline Script -->
     <script>
+        // Toggle visibility of installation steps
         function toggleSteps() {
             const steps = document.getElementById("installation-steps");
             // Toggle between showing and hiding the steps
@@ -220,7 +329,8 @@
                 steps.style.display = "none";
             }
         }
-    
+
+        // Load and convert markdown to HTML
         async function loadMarkdown(file) {
             const response = await fetch(file);
             const text = await response.text();
@@ -228,6 +338,11 @@
             const html = converter.makeHtml(text);
             document.getElementById("markdown-content").innerHTML = html;
         }
+
+        // Example of calling the functions:
+        // loadMarkdown('path_to_your_markdown_file.md');
     </script>
+
+
 </body>
 </html>

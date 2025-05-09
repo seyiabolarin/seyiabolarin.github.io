@@ -1,144 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seyi Abolarin's Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Blog - Seyi Abolarin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+			}
 
-        h1, h2, h3, h4 {
-            color: #333;
-        }
+			h1, h2, h3, h4 {
+				color: #333;
+			}
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+			p {
+				margin: 10px 0;
+			}
 
-        h2 {
-            font-size: 2rem;
-            margin-top: 20px;
-        }
+			.blog-section {
+				margin: 20px auto;
+				max-width: 800px;
+				padding: 20px;
+				background: white;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
 
-        h3, h4 {
-            font-size: 1.5rem;
-            margin-top: 15px;
-        }
+			.blog-post {
+				margin: 15px 0;
+				padding: 10px;
+				background-color: #e9f5ff;
+				border-radius: 5px;
+			}
 
-        p {
-            margin: 10px 0;
-        }
+			.blog-post a.read-more {
+				text-decoration: none;
+				color: white;
+				font-weight: bold;
+				background-color: #0066cc;
+				padding: 8px 16px;
+				border-radius: 4px;
+				display: inline-block;
+			}
 
-        .blog-section {
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+			.blog-post a.read-more:hover {
+				background-color: #004d99;
+			}
 
-        .blog-post {
-            margin: 15px 0;
-            padding: 10px;
-            background-color: #e9f5ff;
-            border-radius: 5px;
-        }
+			.date {
+				color: #777;
+				font-size: 0.9rem;
+				text-align: center;
+				display: block;
+				margin: 5px auto;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-        .blog-post a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            background-color: #0066cc;
-            padding: 8px 16px;
-            border-radius: 4px;
-            display: inline-block;
-        }
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
 
-        .blog-post a:hover {
-            background-color: #004d99;
-        }
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Seyi Abolarin</a>
+					</header>
 
-        .date {
-            color: #777;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-    <h1>📝 Seyi Abolarin's Blog</h1>
-    <p>Dive into my insights and stories on data, technology, health, and more!</p>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Me</a></li>
+							<li><a href="resume.html">Resume</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li class="active"><a href="blog.html">Blog Page</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="icons alt">
+							<li><a href="https://github.com/seyiabolarin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/seyiabolarin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li>
+								<a href="https://www.spatialnode.net/seyiabolarin">
+									<img src="assets/spatialnode.png" alt="Spatialnode" style="width: 16px; height: 16px; border-radius: 50%;">	
+								</a>
+							</li>
+							<li>
+								<a href="mailto:seyiabolarin@hotmail.com" class="icon solid alt fa-envelope">
+									<span class="label">Email</span>
+								</a>
+							</li>
+							<li><a href="tel:+2347031666261" class="icon solid alt fa-phone"><span class="label">Call me (best on mobile)</span></a></li>
+						</ul>
+					</nav>
 
-    <!-- Blog Categories -->
-    <div class="blog-section">
-        <h2>🔍 Data Analytics & Visualization</h2>
-        <div class="blog-post">
-            <h4>Mastering Data Visualization Techniques</h4>
-            <p class="date">Posted on February 28, 2025</p>
-            <a href="blog/data-visualization.html" target="_blank">Read More</a>
-        </div>
-    </div>
+				<!-- Main -->
+					<div id="main">
 
-    <div class="blog-section">
-        <h2>🤖 Artificial Intelligence & Machine Learning</h2>
-        <div class="blog-post">
-            <h4>Building Predictive Models for Health Data</h4>
-            <p class="date">Posted on January 20, 2025</p>
-            <a href="blog/health-predictive-models.html" target="_blank">Read More</a>
-        </div>
-    </div>
+						<!-- Blog Content -->
+						<article class="post featured">
+							<header class="major">
+								<h2>📝 Seyi Abolarin's Blog</h2>
+								<p>Dive into my insights and stories on data, technology, health, and more!</p>
+                            </header>
+							<!-- Blog Categories -->
+							<div class="blog-section">
+								<h2>🔍 Data Analytics & Visualization</h2>
+								<div class="blog-post">
+									<h4>Mastering Data Visualization Techniques from Novice to Pro</h4>
+									<p class="date">Posted on May 9, 2025</p>
+									<a href="https://medium.com/@seyi.abolarin/mastering-data-visualization-techniques-from-novice-to-pro-f8d3642ddf40" target="_blank" class="read-more">Read More</a>
+								</div>
+							</div>
 
-    <div class="blog-section">
-        <h2>🌍 Geospatial Intelligence & GIS</h2>
-        <div class="blog-post">
-            <h4>Creating Geospatial Network Analysis Maps</h4>
-            <p class="date">Posted on March 1, 2025</p>
-            <a href="blog/geospatial-network-analysis.html" target="_blank">Read More</a>
-        </div>
-    </div>
+							<div class="blog-section">
+								<h2>🤖 Artificial Intelligence & Machine Learning</h2>
+								<div class="blog-post">
+									<h4>Building Predictive Models for Health Data</h4>
+									<p class="date">Posted on January 20, 2025</p>
+									<a href="blog/health-predictive-models.html" target="_blank" class="read-more">Read More</a>
+								</div>
+							</div>
 
-    <div class="blog-section">
-        <h2>💡 Health Informatics & Public Health</h2>
-        <div class="blog-post">
-            <h4>Leveraging Data for Health Decision-Making</h4>
-            <p class="date">Posted on February 15, 2025</p>
-            <a href="blog/health-decision-making.html" target="_blank">Read More</a>
-        </div>
-    </div>
+							<div class="blog-section">
+								<h2>🌍 Geospatial Intelligence & GIS</h2>
+								<div class="blog-post">
+									<h4>Creating Geospatial Network Analysis Maps</h4>
+									<p class="date">Posted on March 1, 2025</p>
+									<a href="blog/geospatial-network-analysis.html" target="_blank" class="read-more">Read More</a>
+								</div>
+							</div>
 
-    <div class="blog-section">
-        <h2>🌱 Humanitarian & Social Impact</h2>
-        <div class="blog-post">
-            <h4>Using Data for Social Good: Case Studies</h4>
-            <p class="date">Posted on January 5, 2025</p>
-            <a href="blog/social-impact.html" target="_blank">Read More</a>
-        </div>
-    </div>
+							<div class="blog-section">
+								<h2>💡 Health Informatics & Public Health</h2>
+								<div class="blog-post">
+									<h4>Leveraging Data for Health Decision-Making</h4>
+									<p class="date">Posted on February 15, 2025</p>
+									<a href="blog/health-decision-making.html" target="_blank" class="read-more">Read More</a>
+								</div>
+							</div>
 
-    <div class="blog-section">
-        <h2>🚀 Tech Innovations & Solutions</h2>
-        <div class="blog-post">
-            <h4>Emerging Technologies in Data Analytics</h4>
-            <p class="date">Posted on February 10, 2025</p>
-            <a href="blog/tech-innovations.html" target="_blank">Read More</a>
-        </div>
-    </div>
+							<div class="blog-section">
+								<h2>🌱 Humanitarian & Social Impact</h2>
+								<div class="blog-post">
+									<h4>Using Data for Social Good: Case Studies</h4>
+									<p class="date">Posted on January 5, 2025</p>
+									<a href="blog/social-impact.html" target="_blank" class="read-more">Read More</a>
+								</div>
+							</div>
 
-    <div class="blog-section">
-        <h2>💭 Personal Growth & Life Lessons</h2>
-        <div class="blog-post">
-            <h4>Building a Career in Data Analytics</h4>
-            <p class="date">Posted on March 5, 2025</p>
-            <a href="blog/career-in-data.html" target="_blank">Read More</a>
-        </div>
-    </div>
-</body>
+							<div class="blog-section">
+								<h2>🚀 Tech Innovations & Solutions</h2>
+								<div class="blog-post">
+									<h4>Emerging Technologies in Data Analytics</h4>
+									<p class="date">Posted on February 10, 2025</p>
+									<a href="blog/tech-innovations.html" target="_blank" class="read-more">Read More</a>
+								</div>
+							</div>
+
+							<div class="blog-section">
+								<h2>💭 Personal Growth & Life Lessons</h2>
+								<div class="blog-post">
+									<h4>Building a Career in Data Analytics</h4>
+									<p class="date">Posted on March 5, 2025</p>
+									<a href="blog/career-in-data.html" target="_blank" class="read-more">Read More</a>
+								</div>
+							</div>
+						</article>
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; seyiabolarin</li><li>Design: <a href="https://linkedin.com/in/seyiabolarin">LinkedIn</a></li></ul>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

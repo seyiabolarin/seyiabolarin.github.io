@@ -1,13 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seyi Abolarin's Resume</title>
+    <title>Resume - Seyi Abolarin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .resume-container {
+            margin: 40px auto;
+            max-width: 1000px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 1000px;
+            border: none;
+            border-radius: 6px;
+        }
+    </style>
 </head>
-<body>
-    <iframe src="assets/seyiabolarin_resume.pdf"
-            style="width: 100%; height: 100vh; border: none;" 
-            title="Seyi Abolarin's Resume"></iframe>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Seyi Abolarin</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li class="active"><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog Page</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="icons alt">
+                <li><a href="https://github.com/seyiabolarin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/seyiabolarin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li>
+                    <a href="https://www.spatialnode.net/seyiabolarin">
+                        <img src="assets/spatialnode.png" alt="Spatialnode" style="width: 16px; height: 16px; border-radius: 50%;">
+                    </a>
+                </li>
+                <li><a href="mailto:seyiabolarin@hotmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="tel:+2347031666261" class="icon solid alt fa-phone"><span class="label">Phone</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <section class="resume-container">
+                <h2 style="text-align: center;">📄 My Resume</h2>
+                <!-- Replace the src value below with your resume PDF link or Google Docs embed -->
+                <iframe src="assets/seyiabolarin_resume.pdf" class="resume-frame" title="Seyi Abolarin's Resume"></iframe>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div id="copyright">
+            <ul><li>&copy; seyiabolarin</li><li>Design: <a href="https://linkedin.com/in/seyiabolarin">LinkedIn</a></li></ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
