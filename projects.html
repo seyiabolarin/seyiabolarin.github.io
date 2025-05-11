@@ -189,6 +189,7 @@
             <a href="https://github.com/seyiabolarin/covid-analysis" target="_blank">View on GitHub</a>
             <a href="#">View Output</a>
         </div>
+
         <h3>R Projects</h3>
         <div class="project">
             <h4>Health Outcome Modeling</h4>
@@ -196,6 +197,7 @@
             <a href="https://github.com/seyiabolarin/r-health-outcome" target="_blank">View on GitHub</a>
             <a href="#">View Output</a>
         </div>
+
         <h3>SPSS Projects</h3>
         <div class="project">
             <h4>Statistical Data Analysis</h4>
@@ -203,13 +205,29 @@
             <a href="https://github.com/seyiabolarin/spss-projects" target="_blank">View on GitHub</a>
             <a href="#">View Output</a>
         </div>
+
         <h3>STATA Projects</h3>
         <div class="project">
-            <h4>Advanced Data Cleaning</h4>
-            <p>Data cleaning and statistical analysis using STATA.</p>
-            <a href="https://github.com/seyiabolarin/stata-cleaning" target="_blank">View on GitHub</a>
-            <a href="#">View Output</a>
+            <h4>STATA Weekly Training</h4>
+            <p>Weekly training on STATA from beginner to advanced level, covering practical data cleaning and analysis steps.</p>
+            <a href="https://github.com/seyiabolarin/seyiabolarin.github.io/tree/main/projects/stata_weekly_trainings/" target="_blank">View on GitHub</a>
+            <a href="javascript:void(0);" onclick="toggleStata()">View Weekly Trainings</a>
+            <div id="stata-weeks" style="display: none; margin-top: 10px; margin-left: 20px;"> 
+
+            <a href="javascript:void(0);" onclick="toggleWeek1()">Week 1: Introduction to Stata</a>
+            <div id="week1-files" style="display: none; margin-left: 20px; margin-top: 5px;">
+            <a href="./projects/stata_weekly_trainings/week1_introduction_to_stata/week1_files.zip" download>Download Week 1 files (dofile & logfile) (.zip)</a><br>
         </div>
+
+            <!-- Repeat for other weeks as needed -->
+            <!-- <a href="javascript:void(0);" onclick="toggleWeek('week2-files')">Week 2: Cleaning Missing Data</a><br>
+        <div id="week2-files" style="display: none; margin-left: 20px;">
+            <a href="./projects/stata_weekly_training/week2_cleaning/week2_script.do" download>Download .do file</a><br>
+            <a href="./projects/stata_weekly_training/week2_cleaning/week2_log.smcl" download>Download .smcl log file</a>
+        </div> -->
+    </div>
+</div>
+
         <h3>Excel Projects</h3>
         <div class="project">
             <h4>Financial Data Dashboard</h4>
@@ -303,7 +321,7 @@
 		<div id="copyright">
 		    <ul><li>&copy; seyiabolarin</li><li>Design: <a href="https://linkedin.com/in/seyiabolarin">LinkedIn</a></li></ul>
 		</div>
-			</div>
+		</div>
 
             <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -319,30 +337,45 @@
 
     <!-- Combined Inline Script -->
     <script>
-        // Toggle visibility of installation steps
-        function toggleSteps() {
-            const steps = document.getElementById("installation-steps");
-            // Toggle between showing and hiding the steps
-            if (steps.style.display === "none" || steps.style.display === "") {
-                steps.style.display = "block";
-            } else {
-                steps.style.display = "none";
-            }
+    // Toggle visibility of installation steps
+    function toggleSteps() {
+        const steps = document.getElementById("installation-steps");
+        if (steps.style.display === "none" || steps.style.display === "") {
+            steps.style.display = "block";
+        } else {
+            steps.style.display = "none";
         }
+    }
 
-        // Load and convert markdown to HTML
-        async function loadMarkdown(file) {
-            const response = await fetch(file);
-            const text = await response.text();
-            const converter = new showdown.Converter();
-            const html = converter.makeHtml(text);
-            document.getElementById("markdown-content").innerHTML = html;
+    // Toggle visibility of STATA weeks
+    function toggleStata() {
+        const stata = document.getElementById("stata-weeks");
+        if (stata.style.display === "none" || stata.style.display === "") {
+            stata.style.display = "block";
+        } else {
+            stata.style.display = "none";
         }
+    }
 
-        // Example of calling the functions:
-        // loadMarkdown('path_to_your_markdown_file.md');
+    // Toggle visibility of Week 1 files
+    function toggleWeek1() {
+        const week1 = document.getElementById("week1-files");
+        if (week1.style.display === "none" || week1.style.display === "") {
+            week1.style.display = "block";
+        } else {
+            week1.style.display = "none";
+        }
+    }
+
+    // Load and convert markdown to HTML
+    async function loadMarkdown(file) {
+        const response = await fetch(file);
+        const text = await response.text();
+        const converter = new showdown.Converter();
+        const html = converter.makeHtml(text);
+        document.getElementById("markdown-content").innerHTML = html;
+    }
     </script>
 
-
-</body>
-</html>
+    </body>
+    </html>

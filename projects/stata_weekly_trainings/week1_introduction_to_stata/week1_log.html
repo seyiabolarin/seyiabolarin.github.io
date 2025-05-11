@@ -1,0 +1,371 @@
+                                                       ___  ____  ____  ____  ____(R)
+                                                      /__    /   ____/   /   ____/   
+                                                     ___/   /   /___/   /   /___/    
+                                                       Statistics/Data analysis      
+      
+      -------------------------------------------------------------------------------
+            name:  <unnamed>
+             log:  /Users/seyiabolarin/Documents/GitHub/stata_training_series/week1_t
+      > raining.smcl
+        log type:  smcl
+       opened on:  11 May 2025, 12:13:27
+      
+     1 . 
+      end of do-file
+      
+     2 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+     3 . /* The log is very important and it is what helps to track everything you
+      > do within stata. It helps to show all your executed commands including the 
+      > result output and it is one of the files you will always share with those who
+      > wants to see what you have done within stata */
+     4 . 
+     5 . /* The next important thing you must always do is to ensure you document
+      > all your commands within a do file like I am doing. This will help others to 
+      > be able to follow the same steps you did to get the same results you got. 
+      > Furthermore, it helps for easy automation and verification of all you did. */
+     6 . 
+      end of do-file
+      
+     7 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+     8 . /* Stata has about five major windows which are: The result, the command, 
+      > the review, the variable, and the property window. The result window is where
+      >  
+      > all your executed commands and the outputs are displayed. The command window
+      > is where you are able to write the commands you want to execute within Stata.
+      > The review window is where you get to see all the commands you've ran and you
+      >  
+      > are able to recall some of the commands instead of typing them all over. The 
+      > variable window is where you get to see all the list of the variables of the 
+      > current dataset you've loaded in STATA and lastly the property window is wher
+      > e
+      > you get to see the properties of each of the variable of your dataset */
+     9 . 
+      end of do-file
+      
+    10 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    11 . /* Also, note that stata has both the command syntax and the menu navigation.
+      >  
+      > The command syntax which is often preferred and the most recommended allows y
+      > ou
+      > to instruct stata on all that you intend to do using a STATA command. The men
+      > u
+      > navigation on the other hand is the point and click process within STATA. Thi
+      > s 
+      > approach although will execute all possible tasks you want to do within stata
+      > , 
+      > however, the steps are not documented in your dofile and hence you will not 
+      > be able to automate the process and others might not be able to redo all that
+      >  
+      > you did. The recommendation is to stick with the STATA command way instead. 
+      
+      end of do-file
+      
+    12 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    13 . /* Stata is a very powerful statistical analysis tools that can do basic to
+      > complex analysis. It is very efficient, user friendly and can do almost all
+      > kinds of analysis. */
+    14 . 
+    15 . /* Basic Stata file formats are .dta for stata files, .do for stata dofile, a
+      > nd
+      > .smcl, .log, or .txt for stata log file. 
+      
+      end of do-file
+      
+    16 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    17 . /* Accessing Stata inbuilt dataset for personal practice. STATA has enough da
+      > ta
+      > to practice with. To acess stata inbuilt datasets you can run the command */
+    18 . help dta_examples
+      
+    19 . 
+      end of do-file
+      
+    20 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    21 . 
+    22 . /* For week1 and 2, we shall be accessing and using the Stata auto data. */
+    23 . sysuse auto, clear
+      (1978 automobile data)
+      
+    24 . 
+      end of do-file
+      
+    25 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    26 . * Data Investigation
+    27 . /* It is always very important to investigate your data before commencing wit
+      > h
+      > any form of analysis. Investigating your data helps you to understand the dat
+      > a,
+      > it's structure and the variable types. The commands: browse, describe, list,
+      > codebook, and summarize can often help you to get better understanding of you
+      > r
+      > data before diving into the main analysis */
+    28 . 
+      end of do-file
+      
+    29 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    30 . browse /* This helps you to be able to view your entire dataset */
+      
+    31 . 
+      end of do-file
+      
+    32 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    33 . describe /* This allows you to understand the structure of your dataset */
+      
+      Contains data from /Applications/Stata/ado/base/a/auto.dta
+       Observations:            74                  1978 automobile data
+          Variables:            12                  26 Apr 2025 12:12
+                                                    (_dta has notes)
+      -------------------------------------------------------------------------------
+      Variable      Storage   Display    Value
+          name         type    format    label      Variable label
+      -------------------------------------------------------------------------------
+      make            str18   %-18s                 Make and model
+      price           int     %8.0gc                Price
+      mpg             int     %8.0g                 Mileage (mpg)
+      rep78           int     %8.0g                 Repair record 1978
+      headroom        float   %6.1f                 Headroom (in.)
+      trunk           int     %8.0g                 Trunk space (cu. ft.)
+      weight          int     %8.0gc                Weight (lbs.)
+      length          int     %8.0g                 Length (in.)
+      turn            int     %8.0g                 Turn circle (ft.)
+      displacement    int     %8.0g                 Displacement (cu. in.)
+      gear_ratio      float   %6.2f                 Gear ratio
+      foreign         byte    %8.0g      origin     Car origin
+      -------------------------------------------------------------------------------
+      Sorted by: foreign
+      
+    34 . 
+      end of do-file
+      
+    35 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    36 . codebook price /* This allows you to get more deeper insight into the structu
+      > re of 
+      > your dataset and also get to see some other basic statistics such as the
+      > percentile. It is always advice to use codebook on a particular variable that
+      > requires more deeper understanding rather than on all the variables. NB. If y
+      > ou
+      > execute the codebook command without specifying any variable, then it will
+      > execute for all the variables in your dataset. So it is best to say codebook 
+      > your variable name eg. codebook price. 
+      
+      end of do-file
+      
+    37 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    38 . codebook price /* This allows you to get more deeper insight into the structu
+      > re of 
+      
+      end of do-file
+      
+    39 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    40 . codebook price /* This allows you to get more deeper insight into the structu
+      > re of 
+      > your dataset and also get to see some other basic statistics such as the
+      > percentile. It is always advice to use codebook on a particular variable that
+      > requires more deeper understanding rather than on all the variables. NB. If y
+      > ou
+      > execute the codebook command without specifying any variable, then it will
+      > execute for all the variables in your dataset. So it is best to say codebook 
+      > your variable name eg. codebook price. */
+      
+      -------------------------------------------------------------------------------
+      price                                                                     Price
+      -------------------------------------------------------------------------------
+      
+                        Type: Numeric (int)
+      
+                       Range: [3291,15906]                  Units: 1
+               Unique values: 74                        Missing .: 0/74
+      
+                        Mean: 6165.26
+                   Std. dev.:  2949.5
+      
+                 Percentiles:     10%       25%       50%       75%       90%
+                                 3895      4195    5006.5      6342     11385
+      
+    41 . 
+      end of do-file
+      
+    42 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    43 . list in 1/3 /* This code helps you to view the first three row of your data
+      > in the result window rather than going to the data window. It allows you to
+      > understand the variable names and give you a quick insight into what your dat
+      > a 
+      > is all about. */
+      
+           +-------------------------------------------------------------------------
+      ----------------------------+
+        1. | make        | price | mpg | rep78 | headroom | trunk | weight | length |
+      >  turn | displa~t | gear_r~o |
+           | AMC Concord | 4,099 |  22 |     3 |      2.5 |    11 |  2,930 |    186 |
+      >    40 |      121 |     3.58 |
+           |-------------------------------------------------------------------------
+      ----------------------------|
+           |                                               foreign                   
+      >                             |
+           |                                              Domestic                   
+      >                             |
+           +-------------------------------------------------------------------------
+      ----------------------------+
+      
+           +-------------------------------------------------------------------------
+      ----------------------------+
+        2. | make        | price | mpg | rep78 | headroom | trunk | weight | length |
+      >  turn | displa~t | gear_r~o |
+           | AMC Pacer   | 4,749 |  17 |     3 |      3.0 |    11 |  3,350 |    173 |
+      >    40 |      258 |     2.53 |
+           |-------------------------------------------------------------------------
+      ----------------------------|
+           |                                               foreign                   
+      >                             |
+           |                                              Domestic                   
+      >                             |
+           +-------------------------------------------------------------------------
+      ----------------------------+
+      
+           +-------------------------------------------------------------------------
+      ----------------------------+
+        3. | make        | price | mpg | rep78 | headroom | trunk | weight | length |
+      >  turn | displa~t | gear_r~o |
+           | AMC Spirit  | 3,799 |  22 |     . |      3.0 |    12 |  2,640 |    168 |
+      >    35 |      121 |     3.08 |
+           |-------------------------------------------------------------------------
+      ----------------------------|
+           |                                               foreign                   
+      >                             |
+           |                                              Domestic                   
+      >                             |
+           +-------------------------------------------------------------------------
+      ----------------------------+
+      
+    44 . 
+      end of do-file
+      
+    45 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    46 . /* NB: If you just use the list function without specifying the number of row
+      > s
+      > to display, then it will display the entire dataset in the result window for
+      > you. Also, you can decide to list one or more variable of your choice just to
+      >  
+      > get further understanding of what the variable contains. e.g */
+    47 . 
+    48 . list make price in 1/3
+      
+           +---------------------+
+           | make          price |
+           |---------------------|
+        1. | AMC Concord   4,099 |
+        2. | AMC Pacer     4,749 |
+        3. | AMC Spirit    3,799 |
+           +---------------------+
+      
+    49 . 
+      end of do-file
+      
+    50 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    51 . summarize /* This code helps you to give you a simple statistical summary of 
+      > all your dataset. */
+      
+          Variable |        Obs        Mean    Std. dev.       Min        Max
+      -------------+---------------------------------------------------------
+              make |          0
+             price |         74    6165.257    2949.496       3291      15906
+               mpg |         74     21.2973    5.785503         12         41
+             rep78 |         69    3.405797    .9899323          1          5
+          headroom |         74    2.993243    .8459948        1.5          5
+      -------------+---------------------------------------------------------
+             trunk |         74    13.75676    4.277404          5         23
+            weight |         74    3019.459    777.1936       1760       4840
+            length |         74    187.9324    22.26634        142        233
+              turn |         74    39.64865    4.399354         31         51
+      displacement |         74    197.2973    91.83722         79        425
+      -------------+---------------------------------------------------------
+        gear_ratio |         74    3.014865    .4562871       2.19       3.89
+           foreign |         74    .2972973    .4601885          0          1
+      
+    52 . 
+      end of do-file
+      
+    53 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    54 . /* You can also compute a summary of just one or more specific variables */
+    55 . summarize rep78 price
+      
+          Variable |        Obs        Mean    Std. dev.       Min        Max
+      -------------+---------------------------------------------------------
+             rep78 |         69    3.405797    .9899323          1          5
+             price |         74    6165.257    2949.496       3291      15906
+      
+    56 . 
+      end of do-file
+      
+    57 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    58 . /* You can also decide that you want to carry out some basic tabulation of th
+      > e 
+      > data especially if your data contains continous variables */
+  
+    
+    65 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    66 . tabulate rep78 foreign
+      
+          Repair |
+          record |      Car origin
+            1978 |  Domestic    Foreign |     Total
+      -----------+----------------------+----------
+               1 |         2          0 |         2 
+               2 |         8          0 |         8 
+               3 |        27          3 |        30 
+               4 |         9          9 |        18 
+               5 |         2          9 |        11 
+      -----------+----------------------+----------
+           Total |        48         21 |        69 
+      
+    67 . 
+      end of do-file
+      
+    68 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    69 . save "Week1_stata_data.dta"
+      file Week1_stata_data.dta saved
+      
+    70 . 
+      end of do-file
+      
+    71 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    72 . /* Lastly, it is always best to save your stata data into your local drive an
+      > d 
+      > to do that you will need to write the code */
+    73 . save "Week1_stata_data.dta", replace
+      file Week1_stata_data.dta saved
+      
+    74 . 
+      end of do-file
+      
+    75 . do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+      
+    76 . /* Finally, you must not forget to close your log, so the continous tracking 
+      > of your work can be stopped. */
+    77 . log close
+            name:  <unnamed>
+             log:  /Users/seyiabolarin/Documents/GitHub/stata_training_series/week1_t
+      > raining.smcl
+        log type:  smcl
+       closed on:  11 May 2025, 13:51:24
+      -------------------------------------------------------------------------------
