@@ -1,4 +1,4 @@
-# STATA Weekend Training Series 🎓📊
+# STATA Weekly Training Series 🎓📊
 
 Welcome to the official repository for my ongoing weekly STATA training sessions. This series is designed to help students, analysts, and early-career professionals build strong foundations in STATA for data management, analysis, and visualization.
 
