@@ -1,4 +1,4 @@
-# Week 1: Introduction & Descriptive Statistics
+# Week 1: Introduction to Stata
 
 ## Learning Objectives
 - Understand the STATA interface and key commands
@@ -12,9 +12,10 @@
 - `week1_script.do` – Commands used in class
 - `week1_log.smcl` – STATA session log (raw)
 - `week1_log.txt` – Translated log (readable version)
+NB. All the three files are enclosed in a zip file and you will need to download and extract to access the contents.
 
 ## Key Topics and Commands
-- `Introduction to STATA environment`
+- Introduction to STATA environment
 - Command syntax vs Menu navigation
 - Setting the working directory (cd)
 - Using built-in help and resources

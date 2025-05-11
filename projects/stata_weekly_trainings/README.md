@@ -10,9 +10,7 @@ Each folder contains:
 - 📚 Brief session summaries
 
 ### 📅 Session Index
-- [Week 1: Introduction to stata](week1_introdution_to_stata)
-- [Week 2: Data Loading, Saving and Investigation](week2_data_loading_saving_investigation)
-- [Week 3: Data Management](week3_data_management)
+- [Week 1: Introduction to stata](week1_introduction_to_stata)
 - _...more coming weekly!_
 
 ## Follow My Work
