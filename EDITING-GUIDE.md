@@ -145,6 +145,10 @@ Example card (replace the sample content and link):
 
 ## Before publishing
 
+### Replace the downloadable résumé
+
+Upload your updated public PDF as `assets/seyi-abolarin-resume.pdf`, replacing the existing file. The homepage and Experience page already link to it using a download button. No PDF viewer is embedded. Keep sensitive personal details out of the public copy and check that the PDF remains consistent with your Experience page.
+
 - Make small commits and keep a backup.
 - Match filenames exactly: GitHub Pages paths are case-sensitive.
 - Check links, photographs, mobile layout, story expansion and project filters.

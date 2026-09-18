@@ -2,7 +2,7 @@
 
 ## Passed
 
-- 58 HTML files checked, including legacy forwarding pages; 665 internal links, asset references and fragment targets resolve.
+- 58 HTML files checked, including legacy forwarding pages; 671 internal links, asset references and fragment targets resolve.
 - 100 Chrome render checks across 25 routes at 320, 390, 768 and 1440 pixels wide. No horizontal overflow, missing images or JavaScript errors. The retained conference page was checked separately.
 - Dedicated Blog navigation, featured Medium link, mobile layout and legacy blog redirect checked. Updated 3iS role wording and broader professional positioning checked.
 - All 32 legacy page URLs redirect to clean addresses and preserve query strings and fragments with JavaScript enabled. The no-JavaScript redirect fallback and directory trailing-slash handling were checked.
@@ -21,6 +21,8 @@
 - All three MP4 recordings decoded and played on the homepage and media page. Tested new photo/video entries, homepage featured selection and no-JavaScript video fallback. Existing recordings do not include caption files; optional WebVTT tracks are supported.
 
 ## Scope and limitations
+
+Expanded 3iS, DRC and Palladium responsibilities checked against the supplied career records and updates. Verified the résumé download on the Experience page, its homepage link, and absence of an embedded PDF viewer. The updated three-page public résumé was rendered and visually inspected; phone details are excluded. INIS, HMIS and CTS remain described as ongoing development.
 
 This is a basic functional and rendering review, not a formal accessibility certification or cross-browser audit. Validation used headless Google Chrome on Windows. External links and account availability can change. Formspree delivery needs a post-deployment check by the owner; its existing endpoint has been retained. Archived DHIS2 code examples and Stata commands were not executed.
 

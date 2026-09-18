@@ -35,7 +35,7 @@ This is a static website: update the files and commit to GitHub. There is no adm
 
 The contact form uses `https://formspree.io/f/mqapkjkd`; delivery depends on that endpoint remaining active in the owner's Formspree account. Email links use `seyiabolarin@hotmail.com`.
 
-Keep personal addresses, phone numbers and beneficiary datasets out of public files. The résumé supports browser printing and saving as PDF. DHIS2 learning notes are archived examples; consult the linked official documentation for current installation requirements.
+Keep personal addresses, phone numbers and beneficiary datasets out of public files. The updated public résumé is stored at `assets/seyi-abolarin-resume.pdf` and linked for download from the homepage and Experience page, without an embedded viewer. Replace that PDF when updating your résumé, retaining the filename so the links continue to work. DHIS2 learning notes are archived examples; consult the linked official documentation for current installation requirements.
 
 See [VALIDATION.md](VALIDATION.md) for testing scope. Photographs and programme materials retain their respective ownership and permissions; no blanket licence is applied to them.
 
