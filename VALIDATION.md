@@ -2,8 +2,11 @@
 
 ## Passed
 
-- 34 HTML pages checked; 709 internal links, asset references and fragment targets resolve.
-- 136 Chrome render checks: every page at 320, 390, 768 and 1440 pixels wide. No horizontal overflow, missing images or JavaScript errors.
+- 58 HTML files checked, including legacy forwarding pages; 665 internal links, asset references and fragment targets resolve.
+- 100 Chrome render checks across 25 routes at 320, 390, 768 and 1440 pixels wide. No horizontal overflow, missing images or JavaScript errors. The retained conference page was checked separately.
+- Dedicated Blog navigation, featured Medium link, mobile layout and legacy blog redirect checked. Updated 3iS role wording and broader professional positioning checked.
+- All 32 legacy page URLs redirect to clean addresses and preserve query strings and fragments with JavaScript enabled. The no-JavaScript redirect fallback and directory trailing-slash handling were checked.
+- Canonical URLs, social-sharing URLs, sitemap entries, navigation and nested asset paths updated. All three recordings played on both `/` and `/media/` after migration.
 - Desktop and mobile homepage visually inspected, along with case-study, contact and print layouts.
 - One main landmark and one H1 per page; English language, page titles, descriptions, unique IDs and image alternative text checked.
 - Mobile menu open/close, Escape handling and restored keyboard focus.

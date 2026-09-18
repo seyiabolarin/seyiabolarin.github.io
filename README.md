@@ -1,6 +1,6 @@
 # Seyi Abolarin — Portfolio
 
-Professional portfolio covering humanitarian information management, digital health, analytics, GIS, research and capacity building.
+Professional portfolio covering Information Management, MEAL (Monitoring, Evaluation, Accountability and Learning), Data Analytics and GIS, alongside digital health, research and capacity building.
 
 ## Deploy
 
@@ -17,14 +17,15 @@ See [EDITING-GUIDE.md](EDITING-GUIDE.md) for instructions and a photo-story temp
 | File | Content |
 | --- | --- |
 | `index.html` | Homepage |
-| `about.html` | Profile |
-| `resume.html` | Experience and printable résumé |
-| `projects.html`, `case-studies/` | Project cards and case studies |
-| `photo-stories.html` | Photographs, captions and stories |
-| `media.html`, `assets/media-data.js` | Playable recordings and the shared media list |
-| `blog.html`, `insights/` | Writing and conference contributions |
-| `resources.html` | Learning resources |
-| `contact.html` | Contact form |
+| `about/index.html` | Profile |
+| `experience/index.html` | Experience and printable résumé |
+| `projects/index.html`, `case-studies/` | Project cards and case studies |
+| `photo-stories/index.html` | Photographs, captions and stories |
+| `media/index.html`, `assets/media-data.js` | Playable recordings and the shared media list |
+| `insights/index.html`, `insights/` | Writing and conference contributions |
+| `blog/index.html`, `blog/` | Dedicated blog, including the featured Medium article and future posts |
+| `resources/index.html` | Learning resources |
+| `contact/index.html` | Contact form |
 | `assets/images/` | Photos |
 | `assets/site.css`, `assets/site.js` | Shared appearance and behaviour |
 
@@ -38,3 +39,13 @@ Keep personal addresses, phone numbers and beneficiary datasets out of public fi
 
 See [VALIDATION.md](VALIDATION.md) for testing scope. Photographs and programme materials retain their respective ownership and permissions; no blanket licence is applied to them.
 
+
+## Clean page addresses
+
+Pages live in folders containing an `index.html` file. For example, `projects/index.html` is published at `/projects/`, and `media/index.html` at `/media/`. Edit the folder's `index.html`, not the old root `.html` files; those redirect existing bookmarks.
+
+Upload the entire package, including new folders, updated assets and the old `.html` redirect files. Keep `.git` untouched. Commit and push all changes together. The GitHub Pages publishing directory remains the repository root.
+
+The new addresses take effect after deployment. Old links forward to the clean URLs using browser redirects, with a no-JavaScript refresh fallback. These are not server-side HTTP 301 redirects.
+
+Preview locally with a web server. HTML paths start with `/` and assume hosting at the domain root. In `assets/media-data.js`, continue using `assets/media/...` paths; the renderer handles the site root.

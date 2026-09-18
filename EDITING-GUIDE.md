@@ -10,7 +10,7 @@ You can update this website yourself by editing its HTML files and committing th
 4. Commit with a short description of your change.
 5. Once GitHub Pages finishes publishing, refresh the site and check it on your phone and computer.
 
-For larger changes, edit a local copy and open `index.html` in your browser to preview before committing. Keep a backup. GitHub's file history helps you recover previous versions.
+For larger changes, edit a local copy and preview through a local web server, such as your editor’s Live Server extension. Opening HTML directly from File Explorer will not resolve site-root links correctly. Keep a backup. GitHub's file history helps you recover previous versions.
 
 ## Add a photo story
 
@@ -18,7 +18,7 @@ For a simple photograph or playable video without a long story, use the media in
 
 ## Add a video or photograph to the media library
 
-The homepage and `media.html` use the same list: **`assets/media-data.js`**. You only need to add an item once. No build command is required.
+The homepage and `media/index.html` use the same list: **`assets/media-data.js`**. You only need to add an item once. No build command is required.
 
 1. Upload your video into `assets/media/`, or a photograph into `assets/images/`. Use lowercase filenames with hyphens and no spaces.
 2. For videos, use a browser-compatible MP4 (H.264 video and AAC audio) or WebM. You can upload a JPG cover image into `assets/media/` as well. Keep videos compressed and each repository file below GitHub's 100 MiB file limit.
@@ -59,12 +59,12 @@ Example photograph entry:
 }
 ```
 
-There is no upload dashboard: upload files and edit this list in the GitHub repository. Do not enter a computer path such as `C:\\...`; use the website paths shown above. The original three videos are also included directly in the HTML as a fallback for visitors with JavaScript disabled. If you need newly added items in that fallback as well, copy an existing media-card block in both `index.html` and `media.html` and update its links and text.
+There is no upload dashboard: upload files and edit this list in the GitHub repository. Do not enter a computer path such as `C:\\...`; use the website paths shown above. The original three videos are also included directly in the HTML as a fallback for visitors with JavaScript disabled. If you need newly added items in that fallback as well, copy an existing media-card block in both `index.html` and `media/index.html` and update its links and text.
 
 ## Add a longer photo story
 
 1. Upload a JPG or WebP photograph to `assets/images/`. Use a filename such as `training-2026.jpg`. Resize large photographs and remove location metadata before publishing.
-2. Edit `photo-stories.html`. Find `<div class="photo-story-grid">`.
+2. Edit `photo-stories/index.html`. Find `<div class="photo-story-grid">`.
 3. Paste the template below immediately after that line to place your new story first. You can also copy an existing complete `<article class="photo-story">...</article>` block.
 4. Replace the example title, date, caption, paragraphs and both image paths. Set a unique article ID using lowercase letters and hyphens.
 5. Set the image width and height to its actual pixel dimensions, and write useful alternative text describing the picture.
@@ -73,9 +73,9 @@ There is no upload dashboard: upload files and edit this list in the GitHub repo
 ```html
 <article class="photo-story" id="training-2026">
   <figure>
-    <a class="story-photo" href="assets/images/training-2026.jpg"
+    <a class="story-photo" href="/assets/images/training-2026.jpg"
        aria-label="View full photograph: Learning together">
-      <img src="assets/images/training-2026.jpg"
+      <img src="/assets/images/training-2026.jpg"
            alt="Describe the activity visible in the photograph"
            width="1600" height="1067" loading="lazy">
       <span aria-hidden="true">View photograph ↗</span>
@@ -104,9 +104,9 @@ This is a template, not an existing event or included image. Replace every examp
 
 ## Add a project
 
-1. Copy a similar HTML file in `case-studies/` to a new filename in that folder.
-2. Update its page title, description, canonical URL, Open Graph title/description/URL, heading, dates, role and project content. Keep the relative `../` paths to navigation and assets.
-3. In `projects.html`, duplicate a complete `<article class="project-card">...</article>` inside the project grid. Update both links, image, title, organisation and summary.
+1. Create a new folder such as `case-studies/new-project/`. Copy a similar case study’s `index.html` into that folder.
+2. Update its page title, description, canonical URL, Open Graph title/description/URL, heading, dates, role and project content. Keep HTML links rooted with `/`, for example `/projects/` and `/assets/images/photo.jpg`.
+3. In `projects/index.html`, duplicate a complete `<article class="project-card">...</article>` inside the project grid. Update both links, image, title, organisation and summary.
 4. Use an existing `data-category`: `systems`, `humanitarian`, `analytics`, `gis`, `research` or `capacity`.
 5. Update the initial number beside `id="filter-status"`. Counts update automatically when someone selects a filter.
 6. Add the new page URL to `sitemap.xml` as a `<url><loc>...</loc></url>` entry.
@@ -114,9 +114,32 @@ This is a template, not an existing event or included image. Replace every examp
 
 ## Other updates
 
-- **Insights:** copy a page in `insights/`, update its metadata and content, link it from `blog.html`, and add its URL to `sitemap.xml`.
-- **Experience:** edit or duplicate a `<article class="timeline-row">` block in `resume.html`. Check print preview afterwards.
-- **Existing stories:** edit their text and images in `photo-stories.html`. Stories on that same page do not require new sitemap entries.
+### Publish a blog post
+
+Your dedicated blog is **`/blog/`**, edited in **`blog/index.html`**. It is linked from the navigation and homepage. The featured Medium article remains an external article; its text is not copied into the website.
+
+**To feature another Medium article:** copy an `<article class="blog-post">...</article>` block inside `<div class="blog-posts">`. Change its title, topic, short description and both links to the new article’s Medium URL. Commit the change.
+
+**To write directly on this website:** create a folder such as `blog/my-new-article/`. Copy `insights/gis-health/index.html` into it as `index.html`, then replace the article heading, introduction, body, image and caption with your writing. Update the page title, meta description, canonical URL and Open Graph title/description/URL to describe your article at `https://seyiabolarin.github.io/blog/my-new-article/`. Add `aria-current="page"` to the Blog navigation link. Change the article’s back link to `/blog/` and label it “All blog posts”.
+
+Add a card linking to `/blog/my-new-article/` in `blog/index.html`, and add the new URL to `sitemap.xml`. Only published articles should appear in the blog list. Keep unfinished drafts outside the published repository. GitHub Pages publishes your committed HTML; there is no writing dashboard or automatic Medium sync.
+
+Example card (replace the sample content and link):
+
+```html
+<article class="blog-post">
+  <p class="eyebrow">MEAL · PRACTICE NOTE</p>
+  <h3><a href="/blog/my-new-article/">Your article title</a></h3>
+  <p>A short introduction explaining what readers will learn.</p>
+  <a class="text-link" href="/blog/my-new-article/">Read the article →</a>
+</article>
+```
+
+### Other pages
+
+- **Insights:** create a folder such as `insights/new-article/`, copy an existing article’s `index.html` into it, update the metadata and content, link it from `insights/index.html`, and add its clean URL to `sitemap.xml`.
+- **Experience:** edit or duplicate a `<article class="timeline-row">` block in `experience/index.html`. Check print preview afterwards.
+- **Existing stories:** edit their text and images in `photo-stories/index.html`. Stories on that same page do not require new sitemap entries.
 - **Email or navigation:** update all occurrences across the HTML files, so every page stays consistent.
 - **Appearance:** colours, fonts, spacing and responsive rules are in `assets/site.css`.
 
