@@ -54,7 +54,7 @@
         status.textContent = 'Thank you — your message has been sent.';
         form.reset();
       } catch (_) {
-        status.textContent = 'Your message could not be sent. Your text is still here. Please try again or email seyiabolarin@hotmail.com.';
+        status.textContent = 'Your message could not be sent. Your text is still here. Please try again or email seyiabolarin@outlook.com.';
       } finally {
         clearTimeout(timeout);
         button.disabled = false;
