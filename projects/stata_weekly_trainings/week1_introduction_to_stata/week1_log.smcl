@@ -1,0 +1,329 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}[local training folder]
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}11 May 2025, 12:13:27
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* The log is very important and it is what helps to track everything you
+> do within stata. It helps to show all your executed commands including the 
+> result output and it is one of the files you will always share with those who
+> wants to see what you have done within stata */
+. 
+. /* The next important thing you must always do is to ensure you document
+> all your commands within a do file like I am doing. This will help others to 
+> be able to follow the same steps you did to get the same results you got. 
+> Furthermore, it helps for easy automation and verification of all you did. */
+. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* Stata has about five major windows which are: The result, the command, 
+> the review, the variable, and the property window. The result window is where 
+> all your executed commands and the outputs are displayed. The command window
+> is where you are able to write the commands you want to execute within Stata.
+> The review window is where you get to see all the commands you've ran and you 
+> are able to recall some of the commands instead of typing them all over. The 
+> variable window is where you get to see all the list of the variables of the 
+> current dataset you've loaded in STATA and lastly the property window is where
+> you get to see the properties of each of the variable of your dataset */
+. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* Also, note that stata has both the command syntax and the menu navigation. 
+> The command syntax which is often preferred and the most recommended allows you
+> to instruct stata on all that you intend to do using a STATA command. The menu
+> navigation on the other hand is the point and click process within STATA. This 
+> approach although will execute all possible tasks you want to do within stata, 
+> however, the steps are not documented in your dofile and hence you will not 
+> be able to automate the process and others might not be able to redo all that 
+> you did. The recommendation is to stick with the STATA command way instead. 
+
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* Stata is a very powerful statistical analysis tools that can do basic to
+> complex analysis. It is very efficient, user friendly and can do almost all
+> kinds of analysis. */
+. 
+. /* Basic Stata file formats are .dta for stata files, .do for stata dofile, and
+> .smcl, .log, or .txt for stata log file. 
+
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* Accessing Stata inbuilt dataset for personal practice. STATA has enough data
+> to practice with. To acess stata inbuilt datasets you can run the command */
+. help dta_examples
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. 
+. /* For week1 and 2, we shall be accessing and using the Stata auto data. */
+. sysuse auto, clear
+{txt}(1978 automobile data)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. * Data Investigation
+. /* It is always very important to investigate your data before commencing with
+> any form of analysis. Investigating your data helps you to understand the data,
+> it's structure and the variable types. The commands: browse, describe, list,
+> codebook, and summarize can often help you to get better understanding of your
+> data before diving into the main analysis */
+. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. browse /* This helps you to be able to view your entire dataset */
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. describe /* This allows you to understand the structure of your dataset */
+
+{txt}Contains data from {res}/Applications/Stata/ado/base/a/auto.dta
+{txt} Observations:{res}            74                  1978 automobile data
+{txt}    Variables:{res}            12                  26 Apr 2025 12:12
+                                              (_dta has notes)
+{txt}{hline}
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+{hline}
+{p 0 48}{res}{bind:make           }{txt}{bind: str18   }{bind:%-18s     }{space 1}{bind:         }{bind:  }{res}{res}Make and model{p_end}
+{p 0 48}{bind:price          }{txt}{bind: int     }{bind:%8.0gc    }{space 1}{bind:         }{bind:  }{res}{res}Price{p_end}
+{p 0 48}{bind:mpg            }{txt}{bind: int     }{bind:%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Mileage (mpg){p_end}
+{p 0 48}{bind:rep78          }{txt}{bind: int     }{bind:%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Repair record 1978{p_end}
+{p 0 48}{bind:headroom       }{txt}{bind: float   }{bind:%6.1f     }{space 1}{bind:         }{bind:  }{res}{res}Headroom (in.){p_end}
+{p 0 48}{bind:trunk          }{txt}{bind: int     }{bind:%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Trunk space (cu. ft.){p_end}
+{p 0 48}{bind:weight         }{txt}{bind: int     }{bind:%8.0gc    }{space 1}{bind:         }{bind:  }{res}{res}Weight (lbs.){p_end}
+{p 0 48}{bind:length         }{txt}{bind: int     }{bind:%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Length (in.){p_end}
+{p 0 48}{bind:turn           }{txt}{bind: int     }{bind:%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Turn circle (ft.){p_end}
+{p 0 48}{bind:displacement   }{txt}{bind: int     }{bind:%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Displacement (cu. in.){p_end}
+{p 0 48}{bind:gear_ratio     }{txt}{bind: float   }{bind:%6.2f     }{space 1}{bind:         }{bind:  }{res}{res}Gear ratio{p_end}
+{p 0 48}{bind:foreign        }{txt}{bind: byte    }{bind:%8.0g     }{space 1}{bind:origin   }{bind:  }{res}{res}Car origin{p_end}
+{txt}{hline}
+Sorted by: {res}foreign
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. codebook price /* This allows you to get more deeper insight into the structure of 
+> your dataset and also get to see some other basic statistics such as the
+> percentile. It is always advice to use codebook on a particular variable that
+> requires more deeper understanding rather than on all the variables. NB. If you
+> execute the codebook command without specifying any variable, then it will
+> execute for all the variables in your dataset. So it is best to say codebook 
+> your variable name eg. codebook price. 
+
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. codebook price /* This allows you to get more deeper insight into the structure of 
+
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. codebook price /* This allows you to get more deeper insight into the structure of 
+> your dataset and also get to see some other basic statistics such as the
+> percentile. It is always advice to use codebook on a particular variable that
+> requires more deeper understanding rather than on all the variables. NB. If you
+> execute the codebook command without specifying any variable, then it will
+> execute for all the variables in your dataset. So it is best to say codebook 
+> your variable name eg. codebook price. */
+
+{txt}{hline}
+{res}price{right:Price}
+{txt}{hline}
+
+{col 19}Type: Numeric ({res}int{txt})
+
+{col 18}Range: [{res}3291{txt},{res}15906{txt}]{col 55}Units: {res}1
+{col 10}{txt}Unique values: {res}74{col 51}{txt}Missing .: {res}0{txt}/{res}74
+
+{txt}{col 19}Mean: {res}{ralign 7:6165.26}
+{txt}{col 14}Std. dev.: {res}{ralign 7:2949.5}
+
+{txt}{col 12}Percentiles: {col 25}{ralign 7:10%}{ralign 10:25%}{ralign 10:50%}{ralign 10:75%}{ralign 10:90%}
+{res}{col 25}{ralign 7:3895}{ralign 10:    4195}{ralign 10:  5006.5}{ralign 10:    6342}{ralign 10:   11385}
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. list in 1/3 /* This code helps you to view the first three row of your data
+> in the result window rather than going to the data window. It allows you to
+> understand the variable names and give you a quick insight into what your data 
+> is all about. */
+
+     {txt}{c TLC}{hline 13}{c TT}{hline 7}{c TT}{hline 5}{c TT}{hline 7}{c TT}{hline 10}{c TT}{hline 7}{c TT}{hline 8}{c TT}{hline 8}{c TT}{hline 6}{c TT}{hline 10}{c TT}{hline 10}{c TRC}
+  1. {c |} make        {c |} price {c |} mpg {c |} rep78 {c |} headroom {c |} trunk {c |} weight {c |} length {c |} turn {c |} displa~t {c |} gear_r~o {c |}
+     {c |} {res}AMC Concord {txt}{c |} {res}4,099 {txt}{c |} {res} 22 {txt}{c |} {res}    3 {txt}{c |} {res}     2.5 {txt}{c |} {res}   11 {txt}{c |} {res} 2,930 {txt}{c |} {res}   186 {txt}{c |} {res}  40 {txt}{c |} {res}     121 {txt}{c |} {res}    3.58 {txt}{c |}
+     {c LT}{hline 13}{c BT}{hline 7}{c BT}{hline 5}{c BT}{hline 7}{c BT}{hline 10}{c BT}{hline 7}{c BT}{hline 8}{c BT}{hline 8}{c BT}{hline 6}{c BT}{hline 10}{c BT}{hline 10}{c RT}
+     {c |}                                               foreign                                               {c |}
+     {c |}                                              {res}Domestic                                               {txt}{c |}
+     {c BLC}{hline 101}{c BRC}
+
+     {c TLC}{hline 13}{c TT}{hline 7}{c TT}{hline 5}{c TT}{hline 7}{c TT}{hline 10}{c TT}{hline 7}{c TT}{hline 8}{c TT}{hline 8}{c TT}{hline 6}{c TT}{hline 10}{c TT}{hline 10}{c TRC}
+  2. {c |} make        {c |} price {c |} mpg {c |} rep78 {c |} headroom {c |} trunk {c |} weight {c |} length {c |} turn {c |} displa~t {c |} gear_r~o {c |}
+     {c |} {res}AMC Pacer   {txt}{c |} {res}4,749 {txt}{c |} {res} 17 {txt}{c |} {res}    3 {txt}{c |} {res}     3.0 {txt}{c |} {res}   11 {txt}{c |} {res} 3,350 {txt}{c |} {res}   173 {txt}{c |} {res}  40 {txt}{c |} {res}     258 {txt}{c |} {res}    2.53 {txt}{c |}
+     {c LT}{hline 13}{c BT}{hline 7}{c BT}{hline 5}{c BT}{hline 7}{c BT}{hline 10}{c BT}{hline 7}{c BT}{hline 8}{c BT}{hline 8}{c BT}{hline 6}{c BT}{hline 10}{c BT}{hline 10}{c RT}
+     {c |}                                               foreign                                               {c |}
+     {c |}                                              {res}Domestic                                               {txt}{c |}
+     {c BLC}{hline 101}{c BRC}
+
+     {c TLC}{hline 13}{c TT}{hline 7}{c TT}{hline 5}{c TT}{hline 7}{c TT}{hline 10}{c TT}{hline 7}{c TT}{hline 8}{c TT}{hline 8}{c TT}{hline 6}{c TT}{hline 10}{c TT}{hline 10}{c TRC}
+  3. {c |} make        {c |} price {c |} mpg {c |} rep78 {c |} headroom {c |} trunk {c |} weight {c |} length {c |} turn {c |} displa~t {c |} gear_r~o {c |}
+     {c |} {res}AMC Spirit  {txt}{c |} {res}3,799 {txt}{c |} {res} 22 {txt}{c |} {res}    . {txt}{c |} {res}     3.0 {txt}{c |} {res}   12 {txt}{c |} {res} 2,640 {txt}{c |} {res}   168 {txt}{c |} {res}  35 {txt}{c |} {res}     121 {txt}{c |} {res}    3.08 {txt}{c |}
+     {c LT}{hline 13}{c BT}{hline 7}{c BT}{hline 5}{c BT}{hline 7}{c BT}{hline 10}{c BT}{hline 7}{c BT}{hline 8}{c BT}{hline 8}{c BT}{hline 6}{c BT}{hline 10}{c BT}{hline 10}{c RT}
+     {c |}                                               foreign                                               {c |}
+     {c |}                                              {res}Domestic                                               {txt}{c |}
+     {c BLC}{hline 101}{c BRC}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* NB: If you just use the list function without specifying the number of rows
+> to display, then it will display the entire dataset in the result window for
+> you. Also, you can decide to list one or more variable of your choice just to 
+> get further understanding of what the variable contains. e.g */
+. 
+. list make price in 1/3
+{txt}
+     {c TLC}{hline 13}{c -}{hline 7}{c TRC}
+     {c |} {res}make          price {txt}{c |}
+     {c LT}{hline 13}{c -}{hline 7}{c RT}
+  1. {c |} {res}AMC Concord   4,099 {txt}{c |}
+  2. {c |} {res}AMC Pacer     4,749 {txt}{c |}
+  3. {c |} {res}AMC Spirit    3,799 {txt}{c |}
+     {c BLC}{hline 13}{c -}{hline 7}{c BRC}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. summarize /* This code helps you to give you a simple statistical summary of 
+> all your dataset. */
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}make {c |}{res}          0
+{txt}{space 7}price {c |}{res}         74    6165.257    2949.496       3291      15906
+{txt}{space 9}mpg {c |}{res}         74     21.2973    5.785503         12         41
+{txt}{space 7}rep78 {c |}{res}         69    3.405797    .9899323          1          5
+{txt}{space 4}headroom {c |}{res}         74    2.993243    .8459948        1.5          5
+{txt}{hline 13}{c +}{hline 57}
+{space 7}trunk {c |}{res}         74    13.75676    4.277404          5         23
+{txt}{space 6}weight {c |}{res}         74    3019.459    777.1936       1760       4840
+{txt}{space 6}length {c |}{res}         74    187.9324    22.26634        142        233
+{txt}{space 8}turn {c |}{res}         74    39.64865    4.399354         31         51
+{txt}displacement {c |}{res}         74    197.2973    91.83722         79        425
+{txt}{hline 13}{c +}{hline 57}
+{space 2}gear_ratio {c |}{res}         74    3.014865    .4562871       2.19       3.89
+{txt}{space 5}foreign {c |}{res}         74    .2972973    .4601885          0          1
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* You can also compute a summary of just one or more specific variables */
+. summarize rep78 price
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}rep78 {c |}{res}         69    3.405797    .9899323          1          5
+{txt}{space 7}price {c |}{res}         74    6165.257    2949.496       3291      15906
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* You can also decide that you want to carry out some basic tabulation of the 
+> data especially if your data contains continous variables */
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. tabulate rep78 foreign
+
+    {txt}Repair {c |}
+    record {c |}      Car origin
+      1978 {c |}  Domestic    Foreign {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}         2          0 {txt}{c |}{res}         2 
+{txt}         2 {c |}{res}         8          0 {txt}{c |}{res}         8 
+{txt}         3 {c |}{res}        27          3 {txt}{c |}{res}        30 
+{txt}         4 {c |}{res}         9          9 {txt}{c |}{res}        18 
+{txt}         5 {c |}{res}         2          9 {txt}{c |}{res}        11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        48         21 {txt}{c |}{res}        69 
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. save "Week1_stata_data.dta"
+{txt}{p 0 4 2}
+file {bf}
+Week1_stata_data.dta{rm}
+saved
+{p_end}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* Lastly, it is always best to save your stata data into your local drive and 
+> to do that you will need to write the code */
+. save "Week1_stata_data.dta", replace
+{txt}{p 0 4 2}
+file {bf}
+Week1_stata_data.dta{rm}
+saved
+{p_end}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/s0/wn3tsb5j0f33bv1nfqclc_tm0000gn/T//SD92131.000000"
+{txt}
+{com}. /* Finally, you must not forget to close your log, so the continous tracking 
+> of your work can be stopped. */
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}[local training folder]
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}11 May 2025, 13:51:24
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

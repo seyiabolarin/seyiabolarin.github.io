@@ -1,190 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Seyi Abolarin</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #1c1c1c, #333);
-            margin: 0;
-            padding: 20px;
-            color: #fff;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #ffdd57;
-            text-align: center;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #dcdcdc;
-            text-align: center;
-        }
-
-        label {
-            font-size: 1.2rem;
-            display: block;
-            margin: 10px 0 5px;
-            text-align: left;
-            color: #ffdd57;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 5px 0 15px;
-            border-radius: 6px;
-            border: none;
-            font-size: 1rem;
-            color: #333;
-            background: #fff;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #ffdd57;
-            color: #333;
-            border: none;
-            cursor: pointer;
-            padding: 12px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-top: 10px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #ffc107;
-        }
-
-        .message {
-            margin-top: 10px;
-            font-size: 1rem;
-            text-align: center;
-        }
-
-        .success {
-            color: #00ff7f;
-        }
-
-        .error {
-            color: #ff6347;
-        }
-
-        .social-links {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .social-links a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: #ffdd57;
-            font-size: 1.4rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #ffc107;
-        }
-
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            color: #dcdcdc;
-        }
-    </style>
-    <script>
-        async function handleSubmit(event) {
-            event.preventDefault(); // Prevent form from auto-submitting
-
-            const form = event.target;
-            const formData = new FormData(form);
-            const statusMessage = document.getElementById("status-message");
-
-            try {
-                const response = await fetch("https://formspree.io/f/mqapkjkd", {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        "Accept": "application/json"
-                    }
-                });
-
-                if (response.ok) {
-                    statusMessage.textContent = "Message sent successfully!";
-                    statusMessage.className = "message success";
-                    form.reset(); // Clear the form after successful submission
-                } else {
-                    throw new Error("Something went wrong. Please try again.");
-                }
-            } catch (error) {
-                statusMessage.textContent = error.message;
-                statusMessage.className = "message error";
-            }
-        }
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Seyi Abolarin</title>
+<meta name="description" content="Seyi Abolarin — humanitarian information management, digital health systems, analytics, automation, GIS and interoperability in Nigeria.">
+<meta name="theme-color" content="#153f36">
+<link rel="canonical" href="https://seyiabolarin.github.io/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | Seyi Abolarin">
+<meta property="og:description" content="Seyi Abolarin — humanitarian information management, digital health systems, analytics, automation, GIS and interoperability in Nigeria.">
+<meta property="og:url" content="https://seyiabolarin.github.io/contact.html">
+<meta property="og:image" content="https://seyiabolarin.github.io/assets/images/situation-room.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer>
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Seyi Abolarin", "url": "https://seyiabolarin.github.io/", "jobTitle": "Information Management Expert", "sameAs": ["https://github.com/seyiabolarin", "https://www.linkedin.com/in/seyiabolarin"], "knowsAbout": ["Humanitarian Information Management", "Digital Health", "GIS", "Data Analytics", "Interoperability"]}</script>
 </head>
 <body>
-    <div class="container">
-        <h1>Get in Touch with Seyi Abolarin</h1>
-        <p>I would love to hear from you! Whether it’s a job referral, an offer, project collaboration, data inquiries, or just to say hi, feel free to reach out.</p>
-        
-        <form id="contact-form" onsubmit="handleSubmit(event)">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject" required>
-                <option value="" disabled selected>Select a Subject</option>
-                <option value="Job Referral">Job Referral</option>
-                <option value="Job Offer">Job Offer</option>
-                <option value="Project Collaboration">Project Collaboration</option>
-                <option value="Data Inquiry">Data Inquiry</option>
-                <option value="Training Request">Training Request</option>
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="Just to Say Hi">Just to Say Hi</option>
-            </select>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
-
-            <input type="submit" value="Send Message">
-            <p id="status-message" class="message"></p>
-        </form>
-
-        <div class="social-links">
-            <p>Connect with me:</p>
-            <a href="https://github.com/seyiabolarin" target="_blank">GitHub</a> |
-            <a href="https://www.linkedin.com/in/seyiabolarin" target="_blank">LinkedIn</a> |
-            <a href="https://www.spatialnode.net/seyiabolarin" target="_blank">Spatialnode</a> |
-            <a href="mailto:seyiabolarin@hotmail.com">Email</a> |
-            <a href="tel:+2347031666261">Phone</a>
-        </div>
-
-        <div class="footer">
-            <p>🌍 Your feedback and collaboration are always welcome!</p>
-        </div>
-    </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html">
+<span class="monogram" aria-hidden="true">sa.</span>
+<span>Seyi Abolarin<small>INFORMATION · SYSTEMS · IMPACT</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">☰</span>
+</button>
+<nav id="navigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="resume.html">Experience</a>
+<a href="projects.html">Projects</a>
+<a href="photo-stories.html">Photo Stories</a>
+<a href="media.html">Media</a>
+<a href="blog.html">Insights</a>
+<a href="contact.html" aria-current="page">Contact</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="page-intro wrap">
+<p class="eyebrow">CONTACT</p>
+<h1>Let’s build something<br>
+<em>useful together.</em>
+</h1>
+<p class="lede">For information-system design, humanitarian analytics, research, training or professional opportunities, tell me a little about what you have in mind.</p>
+</section>
+<section class="wrap section compact contact-grid">
+<aside>
+<p class="eyebrow">START A CONVERSATION</p>
+<h2>A programme challenge.<br>A technical question.<br>A new collaboration.</h2>
+<p>
+<a class="email-link" href="mailto:seyiabolarin@hotmail.com">seyiabolarin@hotmail.com ↗</a>
+</p>
+<p>Nigeria</p>
+<div class="contact-links">
+<a href="https://www.linkedin.com/in/seyiabolarin">LinkedIn ↗</a>
+<a href="https://github.com/seyiabolarin">GitHub ↗</a>
+<a href="https://www.spatialnode.net/seyiabolarin">Spatialnode ↗</a>
+</div>
+</aside>
+<form id="contact-form" action="https://formspree.io/f/mqapkjkd" method="post">
+<div class="form-row">
+<div>
+<label for="name">Your name</label>
+<input id="name" name="name" autocomplete="name" required maxlength="120">
+</div>
+<div>
+<label for="email">Email address</label>
+<input type="email" id="email" name="email" autocomplete="email" required maxlength="254">
+</div>
+</div>
+<label for="subject">What would you like to discuss?</label>
+<select id="subject" name="subject" required>
+<option value="">Select a topic</option>
+<option>Project collaboration</option>
+<option>Professional opportunity</option>
+<option>Training & capacity building</option>
+<option>Research & assessments</option>
+<option>General inquiry</option>
+</select>
+<label for="message">Your message</label>
+<textarea id="message" name="message" rows="6" required maxlength="6000">
+</textarea>
+<p class="form-note">This form sends your details through Formspree so I can respond. Please omit beneficiary records and other sensitive programme data. <a href="privacy.html">Privacy details</a>
+</p>
+<button class="button" type="submit">Send message <span aria-hidden="true">↗</span>
+</button>
+<p id="form-status" role="status" aria-live="polite">
+</p>
+<noscript>
+<p>You can submit this form without JavaScript. Formspree will show the result.</p>
+</noscript>
+</form>
+</section>
+</main>
+<footer>
+<div class="wrap footer-grid">
+<div>
+<a class="footer-name" href="index.html">Seyi Abolarin<span class="dot">.</span>
+</a>
+<p>Better information. More informed action.</p>
+<small>Humanitarian response & public health · Nigeria</small>
+</div>
+<div class="footer-links">
+<a href="mailto:seyiabolarin@hotmail.com">Email ↗</a>
+<a href="https://www.linkedin.com/in/seyiabolarin">LinkedIn ↗</a>
+<a href="https://github.com/seyiabolarin">GitHub ↗</a>
+<a href="https://www.spatialnode.net/seyiabolarin">Spatialnode ↗</a>
+</div>
+</div>
+<div class="wrap footer-bottom">
+<span>© 2026 Seyi Abolarin</span>
+<a href="privacy.html">Privacy & accessibility</a>
+<a href="#main">Back to top ↑</a>
+</div>
+</footer>
 </body>
 </html>
