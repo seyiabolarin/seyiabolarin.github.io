@@ -53,3 +53,12 @@ Preview locally with a web server. HTML paths start with `/` and assume hosting 
 ## Blog and scheduling update — 19 September 2026
 
 New articles are hosted on this site. Edit `assets/blog-posts.js` to add preview cards. The existing Medium article remains linked. See `EDITING-GUIDE.md` for step-by-step publishing and booking-calendar setup. The Contact page links to the live Calendly booking page configured in `assets/booking-config.js`.
+
+
+## DRC code collection — 19 September 2026
+
+The Projects page now includes **DRC Python & R workflows** at `/case-studies/drc-data-workflows/`. Related NEWCAP and reporting case studies link to it. Public source examples are maintained separately at https://github.com/seyiabolarin/humanitarian-data-workflows.
+
+`assets/downloads/humanitarian-data-workflows.zip` is a reviewed snapshot for visitors who prefer a download. When updating the code repository, replace this ZIP with a new reviewed snapshot. Do not include private inputs, credentials, generated registers, downloaded photographs, notebook outputs from real records, or a `.git` folder.
+
+The case study states the validation limits: Python demonstrations run with fictional data; the larger R references still need their dependencies and mapped inputs for full execution. Keep that statement accurate when adding projects or changing the code.

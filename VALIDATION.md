@@ -46,3 +46,8 @@ Live dashboards and beneficiary datasets are not included in the public website.
 
 
 Public booking slots verified without submitting a booking: Friday 15:00–18:30 starts and Saturday 10:00–16:30 starts, each 30 minutes. Other weekdays unavailable. Calendar conflict checking has not been connected; online joining details are to be sent manually by the host.
+
+
+## DRC workflow collection update
+
+Added a ninth case study and downloadable, privacy-reviewed code examples. Checked 60 HTML files and 742 internal references before adding external GitHub links: no missing files or anchors. The four affected project/case-study pages passed 16 rendering checks at widths 320, 390, 768 and 1440. Project filtering shows nine total / two analytics cases. The ZIP download and no-JavaScript project list were checked. See the separate code repository's validation notes for execution scope.
