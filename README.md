@@ -33,6 +33,12 @@ This is a static website: update the files and commit to GitHub. There is no adm
 
 ## Contact and maintenance
 
+## Analytics and search visibility
+
+Google Analytics is enabled after visitor consent, and the site is verified in Google Search Console. See [ANALYTICS-GUIDE.md](ANALYTICS-GUIDE.md) for reports, campaign links, measurement limits and ongoing SEO maintenance. Keep the homepage verification tag and shared analytics files when updating the site.
+
+### Contact details
+
 The contact form uses `https://formspree.io/f/mqapkjkd`; delivery depends on that endpoint remaining active in the owner's Formspree account. Email links use `seyiabolarin@outlook.com`.
 
 Keep personal addresses, phone numbers and beneficiary datasets out of public files. The updated public résumé is stored at `assets/seyi-abolarin-resume.pdf` and linked for download from the homepage and Experience page, without an embedded viewer. Replace that PDF when updating your résumé, retaining the filename so the links continue to work. DHIS2 learning notes are archived examples; consult the linked official documentation for current installation requirements.

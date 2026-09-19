@@ -52,6 +52,7 @@
         const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, signal: controller.signal });
         if (!response.ok) throw new Error('Submission failed');
         status.textContent = 'Thank you — your message has been sent.';
+        document.dispatchEvent(new Event('portfolio:contact-sent'));
         form.reset();
       } catch (_) {
         status.textContent = 'Your message could not be sent. Your text is still here. Please try again or email seyiabolarin@outlook.com.';
@@ -63,3 +64,11 @@
   }
 })();
 
+
+// Load the shared preference and measurement controls on every content page.
+(() => {
+  const script = document.createElement('script');
+  script.src = '/assets/analytics.js?v=20260920-1';
+  script.defer = true;
+  document.head.appendChild(script);
+})();
