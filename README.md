@@ -23,7 +23,7 @@ See [EDITING-GUIDE.md](EDITING-GUIDE.md) for instructions and a photo-story temp
 | `photo-stories/index.html` | Photographs, captions and stories |
 | `media/index.html`, `assets/media-data.js` | Playable recordings and the shared media list |
 | `insights/index.html`, `insights/` | Writing and conference contributions |
-| `blog/index.html`, `blog/` | Dedicated blog, including the featured Medium article and future posts |
+| `blog/index.html`, `blog/` | On-site articles and previews; search, topics and pagination via `assets/blog-posts.js` |
 | `resources/index.html` | Learning resources |
 | `contact/index.html` | Contact form |
 | `assets/images/` | Photos |
@@ -49,3 +49,7 @@ Upload the entire package, including new folders, updated assets and the old `.h
 The new addresses take effect after deployment. Old links forward to the clean URLs using browser redirects, with a no-JavaScript refresh fallback. These are not server-side HTTP 301 redirects.
 
 Preview locally with a web server. HTML paths start with `/` and assume hosting at the domain root. In `assets/media-data.js`, continue using `assets/media/...` paths; the renderer handles the site root.
+
+## Blog and scheduling update — 19 September 2026
+
+New articles are hosted on this site. Edit `assets/blog-posts.js` to add preview cards. The existing Medium article remains linked. See `EDITING-GUIDE.md` for step-by-step publishing and booking-calendar setup. The Contact page links to the live Calendly booking page configured in `assets/booking-config.js`.

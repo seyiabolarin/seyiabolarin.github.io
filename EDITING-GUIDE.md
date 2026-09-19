@@ -116,24 +116,50 @@ This is a template, not an existing event or included image. Replace every examp
 
 ### Publish a blog post
 
-Your dedicated blog is **`/blog/`**, edited in **`blog/index.html`**. It is linked from the navigation and homepage. The featured Medium article remains an external article; its text is not copied into the website.
+New articles live directly on your website. The existing Medium article stays linked as an archive item. There is no paid blog service or publishing dashboard to maintain.
 
-**To feature another Medium article:** copy an `<article class="blog-post">...</article>` block inside `<div class="blog-posts">`. Change its title, topic, short description and both links to the new article’s Medium URL. Commit the change.
+1. Create a folder such as `blog/my-new-article/` and copy `blog/keep-your-portfolio-and-resume-up-to-date/index.html` into it as `index.html`.
+2. Replace the title, introduction, date, reading time, cover image and the writing inside `<article class="article-body">`. Use `<p>` for paragraphs, `<h2>` for sections and `<a href="...">` for source links. Update or remove the in-article contents links so they match your headings' IDs.
+3. Update the title and description in the page's `<head>`, canonical link, Open Graph title/description/URL/image and BlogPosting JSON metadata (headline, description, dates, image and mainEntityOfPage). Use your new article URL everywhere; keep the shared navigation and footer.
+4. Add a preview entry at the **top** of `assets/blog-posts.js`, inside the square brackets. Copy an existing object and change its values. Separate objects with commas. Use a short excerpt of roughly 25–40 words and one clear topic. Items display in the order you enter them; put newest posts first.
+5. Add the new article URL to `sitemap.xml`. Publish the article, image and updated list together.
+6. For visitors without JavaScript, copy one complete `<article class="journal-card">...</article>` in `blog/index.html`, inside `id="journal-grid"`, and update it to match. This static list is also useful to search engines. With JavaScript enabled, the list is rendered from `assets/blog-posts.js` instead.
+7. Check the preview, full article, source links and phone layout after GitHub Pages publishes.
 
-**To write directly on this website:** create a folder such as `blog/my-new-article/`. Copy `insights/gis-health/index.html` into it as `index.html`, then replace the article heading, introduction, body, image and caption with your writing. Update the page title, meta description, canonical URL and Open Graph title/description/URL to describe your article at `https://seyiabolarin.github.io/blog/my-new-article/`. Add `aria-current="page"` to the Blog navigation link. Change the article’s back link to `/blog/` and label it “All blog posts”.
+Example entry (replace the sample content):
 
-Add a card linking to `/blog/my-new-article/` in `blog/index.html`, and add the new URL to `sitemap.xml`. Only published articles should appear in the blog list. Keep unfinished drafts outside the published repository. GitHub Pages publishes your committed HTML; there is no writing dashboard or automatic Medium sync.
-
-Example card (replace the sample content and link):
-
-```html
-<article class="blog-post">
-  <p class="eyebrow">MEAL · PRACTICE NOTE</p>
-  <h3><a href="/blog/my-new-article/">Your article title</a></h3>
-  <p>A short introduction explaining what readers will learn.</p>
-  <a class="text-link" href="/blog/my-new-article/">Read the article →</a>
-</article>
+```js
+{
+  "title": "Your article title",
+  "url": "/blog/my-new-article/",
+  "topic": "MEAL",
+  "date": "2026-09-26",
+  "dateLabel": "26 September 2026",
+  "meta": "5 min read",
+  "image": "/assets/images/my-article-cover.jpg",
+  "alt": "Brief description of the cover",
+  "excerpt": "A short introduction explaining the question your article answers and what the reader will take away."
+}
 ```
+
+Search and topic filters update from the list automatically. Pagination appears when there are more than six matching posts, so weekly writing will not turn the blog into one long wall of text. Full articles remain ordinary HTML pages that can be read and shared directly. Keep drafts outside the published repository.
+
+### Connect your booking calendar
+
+The Contact page includes a scheduling section for personal training, projects and general conversations. It now links to https://calendly.com/seyiabolarin-kzbq/30min for 30-minute introductory meetings: Fridays 15:00–19:00 and Saturdays 10:00–17:00 WAT. Joining details must be sent by the host before the meeting.
+
+1. Sign in to your booking service and connect the calendar you actually use.
+2. Create one introductory conversation event. Set its duration, Africa/Lagos time zone, your chosen availability, meeting location, minimum notice and buffers. Check the settings yourself before sharing it publicly.
+3. Copy the event's public HTTPS booking link.
+4. Open `assets/booking-config.js` and paste the link between the empty quotation marks. Commit the change. The Contact button automatically changes to “Choose an available time” and explains that visitors are opening an external booking service.
+5. Open the public link in a signed-out browser and check the time zone and available slots. No test appointment needs to be submitted.
+
+Calendly's Free plan currently supports one event type and one calendar connection. One introductory event can cover training, project enquiries and general conversations; use its booking questions to ask the visitor's topic. Do not enable paid trial features unless you want a paid plan later. Pricing reference: https://calendly.com/pricing
+
+Suggested event description: “An introductory conversation about your project, personal training goals or professional enquiry. Please tell me what you would like to discuss so I can prepare. Any further training or project work will be agreed separately.”
+
+The website itself does not check availability or store bookings. Confirmation, cancellation and rescheduling are handled by the booking provider. The current booking link also works with JavaScript disabled. If changing providers, update the link in `contact/index.html` as well as `assets/booking-config.js`.
+
 
 ### Other pages
 

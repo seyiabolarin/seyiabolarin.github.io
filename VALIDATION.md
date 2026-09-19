@@ -1,8 +1,8 @@
-# Validation — 18 September 2026
+# Validation — 19 September 2026
 
 ## Passed
 
-- 58 HTML files checked, including legacy forwarding pages; 679 internal links, asset references and fragment targets resolve.
+- 59 HTML files checked, including legacy forwarding pages; 716 internal links, asset references and fragment targets resolve.
 - 100 Chrome render checks across 25 routes at 320, 390, 768 and 1440 pixels wide. No horizontal overflow, missing images or JavaScript errors. The retained conference page was checked separately.
 - Dedicated Blog navigation, featured Medium link, mobile layout and legacy blog redirect checked. Updated 3iS role wording and broader professional positioning checked.
 - All 32 legacy page URLs redirect to clean addresses and preserve query strings and fragments with JavaScript enabled. The no-JavaScript redirect fallback and directory trailing-slash handling were checked.
@@ -34,3 +34,15 @@ Live dashboards and beneficiary datasets are not included in the public website.
 
 
 
+
+## On-site blog and scheduling checks
+
+- New seven-minute portfolio article includes linked primary sources for both Austin Kleon quotations and the WEF employer-expectations figure.
+- Twelve additional Chrome layout checks across blog, article and Contact at 320, 390, 768 and 1440 pixels. No overflow, missing images or script errors.
+- Search, topic filter, empty results, and a simulated 14-post archive verified; pagination displays six posts at a time. Test posts were not saved to the website.
+- Existing articles and the new full article remain readable without JavaScript.
+- Email scheduling fallback and activation with an intercepted sample booking URL verified. No appointments or messages submitted. The live Calendly page was subsequently connected and verified for Friday 15:00–19:00 and Saturday 10:00–17:00 WAT, with 30-minute meetings.
+- The supplied ZIP was used as the baseline; its SA. branding was preserved. Git internals were excluded from the deployable output.
+
+
+Public booking slots verified without submitting a booking: Friday 15:00–18:30 starts and Saturday 10:00–16:30 starts, each 30 minutes. Other weekdays unavailable. Calendar conflict checking has not been connected; online joining details are to be sent manually by the host.
